@@ -1,1 +1,0 @@
-/home/robotpi/ws_lidar/build/mpu6050driver/ament_cmake_environment_hooks/local_setup.bash

@@ -1,1 +1,0 @@
-/home/robotpi/ws_lidar/src/imu_lidar_sensor_fusion/launch/fusion_launch.py

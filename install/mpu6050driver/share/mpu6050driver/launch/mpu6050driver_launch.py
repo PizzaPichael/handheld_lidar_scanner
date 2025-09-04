@@ -1,1 +1,0 @@
-/home/robotpi/ws_lidar/src/ros2_mpu6050_driver/launch/mpu6050driver_launch.py
