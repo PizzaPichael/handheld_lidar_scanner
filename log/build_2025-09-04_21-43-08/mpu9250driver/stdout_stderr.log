@@ -1,0 +1,31 @@
+[ 16%] [32mBuilding CXX object lib/mpu9250sensor/CMakeFiles/mpu9250sensor.dir/src/mpu9250sensor.cpp.o[0m
+[ 33%] [32m[1mLinking CXX static library libmpu9250sensor.a[0m
+[ 33%] Built target mpu9250sensor
+[ 50%] [32mBuilding CXX object lib/i2c/CMakeFiles/linux_i2c_communicator.dir/src/LinuxI2cCommunicator.cpp.o[0m
+[ 66%] [32m[1mLinking CXX static library liblinux_i2c_communicator.a[0m
+[ 66%] Built target linux_i2c_communicator
+[ 83%] [32mBuilding CXX object CMakeFiles/mpu9250driver.dir/src/mpu9250driver.cpp.o[0m
+[100%] [32m[1mLinking CXX executable mpu9250driver[0m
+[100%] Built target mpu9250driver
+-- Install configuration: ""
+-- Installing: /home/robotpi/ws_lidar/install/mpu9250driver/lib/mpu9250driver/mpu9250driver
+-- Set non-toolchain portion of runtime path of "/home/robotpi/ws_lidar/install/mpu9250driver/lib/mpu9250driver/mpu9250driver" to ""
+-- Installing: /home/robotpi/ws_lidar/install/mpu9250driver/share/mpu9250driver//launch
+-- Installing: /home/robotpi/ws_lidar/install/mpu9250driver/share/mpu9250driver//launch/mpu9250driver_launch.py
+-- Installing: /home/robotpi/ws_lidar/install/mpu9250driver/share/mpu9250driver//params
+-- Installing: /home/robotpi/ws_lidar/install/mpu9250driver/share/mpu9250driver//params/mpu9250.yaml
+-- Installing: /home/robotpi/ws_lidar/install/mpu9250driver/share/ament_index/resource_index/package_run_dependencies/mpu9250driver
+-- Installing: /home/robotpi/ws_lidar/install/mpu9250driver/share/ament_index/resource_index/parent_prefix_path/mpu9250driver
+-- Installing: /home/robotpi/ws_lidar/install/mpu9250driver/share/mpu9250driver/environment/ament_prefix_path.sh
+-- Installing: /home/robotpi/ws_lidar/install/mpu9250driver/share/mpu9250driver/environment/ament_prefix_path.dsv
+-- Installing: /home/robotpi/ws_lidar/install/mpu9250driver/share/mpu9250driver/environment/path.sh
+-- Installing: /home/robotpi/ws_lidar/install/mpu9250driver/share/mpu9250driver/environment/path.dsv
+-- Installing: /home/robotpi/ws_lidar/install/mpu9250driver/share/mpu9250driver/local_setup.bash
+-- Installing: /home/robotpi/ws_lidar/install/mpu9250driver/share/mpu9250driver/local_setup.sh
+-- Installing: /home/robotpi/ws_lidar/install/mpu9250driver/share/mpu9250driver/local_setup.zsh
+-- Installing: /home/robotpi/ws_lidar/install/mpu9250driver/share/mpu9250driver/local_setup.dsv
+-- Installing: /home/robotpi/ws_lidar/install/mpu9250driver/share/mpu9250driver/package.dsv
+-- Installing: /home/robotpi/ws_lidar/install/mpu9250driver/share/ament_index/resource_index/packages/mpu9250driver
+-- Installing: /home/robotpi/ws_lidar/install/mpu9250driver/share/mpu9250driver/cmake/mpu9250driverConfig.cmake
+-- Installing: /home/robotpi/ws_lidar/install/mpu9250driver/share/mpu9250driver/cmake/mpu9250driverConfig-version.cmake
+-- Installing: /home/robotpi/ws_lidar/install/mpu9250driver/share/mpu9250driver/package.xml

@@ -1,0 +1,117 @@
+[0.000000] (-) TimerEvent: {}
+[0.003488] (-) JobUnselected: {'identifier': 'imu_lidar_sensor_fusion'}
+[0.003694] (-) JobUnselected: {'identifier': 'mpu6050driver'}
+[0.003884] (-) JobUnselected: {'identifier': 'rplidar_ros'}
+[0.004261] (mpu9250driver) JobQueued: {'identifier': 'mpu9250driver', 'dependencies': OrderedDict()}
+[0.004858] (mpu9250driver) JobStarted: {'identifier': 'mpu9250driver'}
+[0.031642] (mpu9250driver) JobProgress: {'identifier': 'mpu9250driver', 'progress': 'cmake'}
+[0.033593] (mpu9250driver) Command: {'cmd': ['/usr/bin/cmake', '/home/robotpi/ws_lidar/src/ros2_mpu9250_driver', '-DCMAKE_INSTALL_PREFIX=/home/robotpi/ws_lidar/install/mpu9250driver'], 'cwd': '/home/robotpi/ws_lidar/build/mpu9250driver', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'robotpi', 'SSH_CLIENT': 'fe80::3d0b:c4ea:a353:c7aa%wlan0 55979 22', 'XDG_SESSION_TYPE': 'tty', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/robotpi', 'OLDPWD': '/home/robotpi/ws_lidar/src', 'SSH_TTY': '/dev/pts/1', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'COLCON_PREFIX_PATH': '/home/robotpi/ws_lidar/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'robotpi', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '4', 'PATH': '/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'XDG_RUNTIME_DIR': '/run/user/1000', 'LANG': 'en_US.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'AMENT_PREFIX_PATH': '/home/robotpi/ws_lidar/install/rplidar_ros:/home/robotpi/ws_lidar/install/mpu6050driver:/home/robotpi/ws_lidar/install/imu_lidar_sensor_fusion:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/home/robotpi/ws_lidar/build/mpu9250driver', 'LC_ALL': 'en_US.UTF-8', 'SSH_CONNECTION': 'fe80::3d0b:c4ea:a353:c7aa%wlan0 55979 fe80::10ad:544d:72d7:3d12%wlan0 22', 'XDG_DATA_DIRS': '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/robotpi/ws_lidar/install/imu_lidar_sensor_fusion/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/home/robotpi/ws_lidar/install/rplidar_ros:/home/robotpi/ws_lidar/install/mpu6050driver:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/robotpi/ws_lidar/install/imu_lidar_sensor_fusion:/opt/ros/jazzy'}), 'shell': False}
+[0.099947] (-) TimerEvent: {}
+[0.200330] (-) TimerEvent: {}
+[0.300985] (-) TimerEvent: {}
+[0.357506] (mpu9250driver) StdoutLine: {'line': b'-- The C compiler identification is GNU 13.3.0\n'}
+[0.401342] (-) TimerEvent: {}
+[0.503495] (-) TimerEvent: {}
+[0.604404] (-) TimerEvent: {}
+[0.609099] (mpu9250driver) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 13.3.0\n'}
+[0.671511] (mpu9250driver) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.706080] (-) TimerEvent: {}
+[0.809004] (-) TimerEvent: {}
+[0.909712] (-) TimerEvent: {}
+[0.991103] (mpu9250driver) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[1.009851] (-) TimerEvent: {}
+[1.012785] (mpu9250driver) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[1.021076] (mpu9250driver) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[1.022082] (mpu9250driver) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[1.053842] (mpu9250driver) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[1.110042] (-) TimerEvent: {}
+[1.210560] (-) TimerEvent: {}
+[1.313053] (-) TimerEvent: {}
+[1.344077] (mpu9250driver) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[1.364006] (mpu9250driver) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[1.364992] (mpu9250driver) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[1.366403] (mpu9250driver) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[1.385363] (mpu9250driver) StdoutLine: {'line': b'-- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)\n'}
+[1.413899] (-) TimerEvent: {}
+[1.514474] (-) TimerEvent: {}
+[1.619085] (-) TimerEvent: {}
+[1.719733] (-) TimerEvent: {}
+[1.733356] (mpu9250driver) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter \n'}
+[1.819873] (-) TimerEvent: {}
+[1.920435] (-) TimerEvent: {}
+[2.021096] (-) TimerEvent: {}
+[2.035816] (mpu9250driver) StdoutLine: {'line': b'-- Found rclcpp: 28.1.11 (/opt/ros/jazzy/share/rclcpp/cmake)\n'}
+[2.121285] (-) TimerEvent: {}
+[2.172819] (mpu9250driver) StdoutLine: {'line': b'-- Found rosidl_generator_c: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)\n'}
+[2.221818] (-) TimerEvent: {}
+[2.223446] (mpu9250driver) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)\n'}
+[2.276033] (mpu9250driver) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[2.321936] (-) TimerEvent: {}
+[2.328163] (mpu9250driver) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[2.422095] (-) TimerEvent: {}
+[2.522627] (-) TimerEvent: {}
+[2.555140] (mpu9250driver) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 7.3.2 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)\n'}
+[2.561779] (mpu9250driver) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 8.4.3 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)\n'}
+[2.622737] (-) TimerEvent: {}
+[2.724997] (-) TimerEvent: {}
+[2.819992] (mpu9250driver) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/aarch64-linux-gnu/libcrypto.so (found version "3.0.13")  \n'}
+[2.825123] (-) TimerEvent: {}
+[2.870584] (mpu9250driver) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") \n'}
+[2.925468] (-) TimerEvent: {}
+[2.946100] (mpu9250driver) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[3.025693] (-) TimerEvent: {}
+[3.128754] (-) TimerEvent: {}
+[3.145560] (mpu9250driver) StdoutLine: {'line': b'-- Found sensor_msgs: 5.3.6 (/opt/ros/jazzy/share/sensor_msgs/cmake)\n'}
+[3.228541] (-) TimerEvent: {}
+[3.328906] (-) TimerEvent: {}
+[3.429301] (-) TimerEvent: {}
+[3.530313] (-) TimerEvent: {}
+[3.577523] (mpu9250driver) StdoutLine: {'line': b'-- Configuring done (3.5s)\n'}
+[3.624203] (mpu9250driver) StdoutLine: {'line': b'-- Generating done (0.0s)\n'}
+[3.630858] (-) TimerEvent: {}
+[3.642604] (mpu9250driver) StdoutLine: {'line': b'-- Build files have been written to: /home/robotpi/ws_lidar/build/mpu9250driver\n'}
+[3.680986] (mpu9250driver) CommandEnded: {'returncode': 0}
+[3.681534] (mpu9250driver) JobProgress: {'identifier': 'mpu9250driver', 'progress': 'build'}
+[3.681574] (mpu9250driver) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/robotpi/ws_lidar/build/mpu9250driver', '--', '-j4', '-l4'], 'cwd': '/home/robotpi/ws_lidar/build/mpu9250driver', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'robotpi', 'SSH_CLIENT': 'fe80::3d0b:c4ea:a353:c7aa%wlan0 55979 22', 'XDG_SESSION_TYPE': 'tty', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/robotpi', 'OLDPWD': '/home/robotpi/ws_lidar/src', 'SSH_TTY': '/dev/pts/1', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'COLCON_PREFIX_PATH': '/home/robotpi/ws_lidar/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'robotpi', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '4', 'PATH': '/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'XDG_RUNTIME_DIR': '/run/user/1000', 'LANG': 'en_US.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'AMENT_PREFIX_PATH': '/home/robotpi/ws_lidar/install/rplidar_ros:/home/robotpi/ws_lidar/install/mpu6050driver:/home/robotpi/ws_lidar/install/imu_lidar_sensor_fusion:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/home/robotpi/ws_lidar/build/mpu9250driver', 'LC_ALL': 'en_US.UTF-8', 'SSH_CONNECTION': 'fe80::3d0b:c4ea:a353:c7aa%wlan0 55979 fe80::10ad:544d:72d7:3d12%wlan0 22', 'XDG_DATA_DIRS': '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/robotpi/ws_lidar/install/imu_lidar_sensor_fusion/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/home/robotpi/ws_lidar/install/rplidar_ros:/home/robotpi/ws_lidar/install/mpu6050driver:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/robotpi/ws_lidar/install/imu_lidar_sensor_fusion:/opt/ros/jazzy'}), 'shell': False}
+[3.731618] (-) TimerEvent: {}
+[3.811713] (mpu9250driver) StdoutLine: {'line': b'[ 16%] \x1b[32mBuilding CXX object lib/mpu9250sensor/CMakeFiles/mpu9250sensor.dir/src/mpu9250sensor.cpp.o\x1b[0m\n'}
+[3.833078] (-) TimerEvent: {}
+[3.933768] (-) TimerEvent: {}
+[4.037542] (-) TimerEvent: {}
+[4.138375] (-) TimerEvent: {}
+[4.239007] (-) TimerEvent: {}
+[4.339620] (-) TimerEvent: {}
+[4.429085] (mpu9250driver) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/robotpi/ws_lidar/src/ros2_mpu9250_driver/lib/mpu9250sensor/src/mpu9250sensor.cpp:1\x1b[m\x1b[K:\n'}
+[4.431223] (mpu9250driver) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robotpi/ws_lidar/src/ros2_mpu9250_driver/lib/mpu9250sensor/include/mpu9250sensor/mpu9250sensor.h:94:28:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kfield \xe2\x80\x98\x1b[01m\x1b[KACCEL_RANGES\x1b[m\x1b[K\xe2\x80\x99 has incomplete type \xe2\x80\x98\x1b[01m\x1b[Kconst std::array<int, 4>\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.431624] (mpu9250driver) StderrLine: {'line': b'   94 |   const std::array<int, 4> \x1b[01;31m\x1b[KACCEL_RANGES\x1b[m\x1b[K{2, 4, 8, 16};\n'}
+[4.431766] (mpu9250driver) StderrLine: {'line': b'      |                            \x1b[01;31m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.432685] (mpu9250driver) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/c++/13/bits/unique_ptr.h:36\x1b[m\x1b[K,\n'}
+[4.433005] (mpu9250driver) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/13/memory:78\x1b[m\x1b[K,\n'}
+[4.434077] (mpu9250driver) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/robotpi/ws_lidar/src/ros2_mpu9250_driver/lib/mpu9250sensor/include/mpu9250sensor/mpu9250sensor.h:4\x1b[m\x1b[K:\n'}
+[4.434221] (mpu9250driver) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/13/tuple:2019:45:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kdeclaration of \xe2\x80\x98\x1b[01m\x1b[Kstruct std::array<int, 4>\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.434355] (mpu9250driver) StderrLine: {'line': b' 2019 |   template<typename _Tp, size_t _Nm> struct \x1b[01;36m\x1b[Karray\x1b[m\x1b[K;\n'}
+[4.434447] (mpu9250driver) StderrLine: {'line': b'      |                                             \x1b[01;36m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[4.436241] (mpu9250driver) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robotpi/ws_lidar/src/ros2_mpu9250_driver/lib/mpu9250sensor/include/mpu9250sensor/mpu9250sensor.h:95:28:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kfield \xe2\x80\x98\x1b[01m\x1b[KGYRO_RANGES\x1b[m\x1b[K\xe2\x80\x99 has incomplete type \xe2\x80\x98\x1b[01m\x1b[Kconst std::array<int, 4>\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.436667] (mpu9250driver) StderrLine: {'line': b'   95 |   const std::array<int, 4> \x1b[01;31m\x1b[KGYRO_RANGES\x1b[m\x1b[K{250, 500, 1000, 2000};\n'}
+[4.436864] (mpu9250driver) StderrLine: {'line': b'      |                            \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.437064] (mpu9250driver) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/13/tuple:2019:45:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kdeclaration of \xe2\x80\x98\x1b[01m\x1b[Kstruct std::array<int, 4>\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.437215] (mpu9250driver) StderrLine: {'line': b' 2019 |   template<typename _Tp, size_t _Nm> struct \x1b[01;36m\x1b[Karray\x1b[m\x1b[K;\n'}
+[4.437408] (mpu9250driver) StderrLine: {'line': b'      |                                             \x1b[01;36m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[4.437538] (mpu9250driver) StderrLine: {'line': b'\x1b[01m\x1b[K/home/robotpi/ws_lidar/src/ros2_mpu9250_driver/lib/mpu9250sensor/include/mpu9250sensor/mpu9250sensor.h:96:28:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kfield \xe2\x80\x98\x1b[01m\x1b[KDLPF_RANGES\x1b[m\x1b[K\xe2\x80\x99 has incomplete type \xe2\x80\x98\x1b[01m\x1b[Kconst std::array<int, 7>\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.437645] (mpu9250driver) StderrLine: {'line': b'   96 |   const std::array<int, 7> \x1b[01;31m\x1b[KDLPF_RANGES\x1b[m\x1b[K{260, 184, 94, 44, 21, 10, 5};\n'}
+[4.437730] (mpu9250driver) StderrLine: {'line': b'      |                            \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.437809] (mpu9250driver) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/13/tuple:2019:45:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kdeclaration of \xe2\x80\x98\x1b[01m\x1b[Kstruct std::array<int, 7>\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.440061] (-) TimerEvent: {}
+[4.440468] (mpu9250driver) StderrLine: {'line': b' 2019 |   template<typename _Tp, size_t _Nm> struct \x1b[01;36m\x1b[Karray\x1b[m\x1b[K;\n'}
+[4.440779] (mpu9250driver) StderrLine: {'line': b'      |                                             \x1b[01;36m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[4.541003] (-) TimerEvent: {}
+[4.641387] (-) TimerEvent: {}
+[4.744999] (-) TimerEvent: {}
+[4.845537] (-) TimerEvent: {}
+[4.946380] (-) TimerEvent: {}
+[4.948783] (mpu9250driver) StderrLine: {'line': b'gmake[2]: *** [lib/mpu9250sensor/CMakeFiles/mpu9250sensor.dir/build.make:76: lib/mpu9250sensor/CMakeFiles/mpu9250sensor.dir/src/mpu9250sensor.cpp.o] Error 1\n'}
+[4.949698] (mpu9250driver) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:240: lib/mpu9250sensor/CMakeFiles/mpu9250sensor.dir/all] Error 2\n'}
+[4.951129] (mpu9250driver) StderrLine: {'line': b'gmake: *** [Makefile:146: all] Error 2\n'}
+[4.956862] (mpu9250driver) CommandEnded: {'returncode': 2}
+[4.986009] (mpu9250driver) JobEnded: {'identifier': 'mpu9250driver', 'rc': 2}
+[4.989570] (-) EventReactorShutdown: {}
