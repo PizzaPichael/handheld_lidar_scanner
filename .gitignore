@@ -1,0 +1,25 @@
+# ROS 2 Build- und Installationsordner
+build/
+install/
+log/
+
+# Colcon-spezifische Dateien
+.colcon/
+
+# IDE-spezifische Dateien (optional)
+.idea/
+.vscode/
+*.swp
+
+# Systemdateien
+.DS_Store
+Thumbs.db
+
+# Python-spezifisch (falls genutzt)
+__pycache__/
+*.py[cod]
+*$py.class
+
+# CMake-Cache
+CMakeCache.txt
+cmake_install.cmake
