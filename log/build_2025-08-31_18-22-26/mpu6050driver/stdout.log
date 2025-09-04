@@ -1,0 +1,36 @@
+-- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Found rclcpp: 28.1.11 (/opt/ros/jazzy/share/rclcpp/cmake)
+-- Found rosidl_generator_c: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+-- Found rosidl_generator_cpp: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 7.3.2 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+-- Found rmw_fastrtps_cpp: 8.4.3 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Found sensor_msgs: 5.3.6 (/opt/ros/jazzy/share/sensor_msgs/cmake)
+-- Configuring done (3.9s)
+-- Generating done (0.1s)
+-- Build files have been written to: /home/robotpi/ws_lidar/build/mpu6050driver
+[ 33%] [32m[1mLinking CXX executable mpu6050driver[0m
+[100%] Built target mpu6050driver
+-- Install configuration: ""
+-- Execute custom install script
+-- Symlinking: /home/robotpi/ws_lidar/install/mpu6050driver/lib/mpu6050driver/mpu6050driver
+-- Symlinking: /home/robotpi/ws_lidar/install/mpu6050driver/share/mpu6050driver//launch/mpu6050driver_launch.py
+-- Symlinking: /home/robotpi/ws_lidar/install/mpu6050driver/share/mpu6050driver//params/mpu6050.yaml
+-- Symlinking: /home/robotpi/ws_lidar/install/mpu6050driver/share/ament_index/resource_index/package_run_dependencies/mpu6050driver
+-- Symlinking: /home/robotpi/ws_lidar/install/mpu6050driver/share/ament_index/resource_index/parent_prefix_path/mpu6050driver
+-- Symlinking: /home/robotpi/ws_lidar/install/mpu6050driver/share/mpu6050driver/environment/ament_prefix_path.sh
+-- Symlinking: /home/robotpi/ws_lidar/install/mpu6050driver/share/mpu6050driver/environment/ament_prefix_path.dsv
+-- Symlinking: /home/robotpi/ws_lidar/install/mpu6050driver/share/mpu6050driver/environment/path.sh
+-- Symlinking: /home/robotpi/ws_lidar/install/mpu6050driver/share/mpu6050driver/environment/path.dsv
+-- Symlinking: /home/robotpi/ws_lidar/install/mpu6050driver/share/mpu6050driver/local_setup.bash
+-- Symlinking: /home/robotpi/ws_lidar/install/mpu6050driver/share/mpu6050driver/local_setup.sh
+-- Symlinking: /home/robotpi/ws_lidar/install/mpu6050driver/share/mpu6050driver/local_setup.zsh
+-- Symlinking: /home/robotpi/ws_lidar/install/mpu6050driver/share/mpu6050driver/local_setup.dsv
+-- Symlinking: /home/robotpi/ws_lidar/install/mpu6050driver/share/mpu6050driver/package.dsv
+-- Symlinking: /home/robotpi/ws_lidar/install/mpu6050driver/share/ament_index/resource_index/packages/mpu6050driver
+-- Symlinking: /home/robotpi/ws_lidar/install/mpu6050driver/share/mpu6050driver/cmake/mpu6050driverConfig.cmake
+-- Symlinking: /home/robotpi/ws_lidar/install/mpu6050driver/share/mpu6050driver/cmake/mpu6050driverConfig-version.cmake
+-- Symlinking: /home/robotpi/ws_lidar/install/mpu6050driver/share/mpu6050driver/package.xml

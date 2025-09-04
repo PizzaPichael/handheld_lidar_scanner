@@ -1,0 +1,74 @@
+[0.760s] Invoking command in '/home/robotpi/ws_lidar/build/rplidar_ros': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/robotpi/ws_lidar/install/imu_lidar_sensor_fusion:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/robotpi/ws_lidar/src/rplidar_ros -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/robotpi/ws_lidar/install/rplidar_ros
+[0.858s] -- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[2.239s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[2.380s] -- Found rclcpp: 28.1.11 (/opt/ros/jazzy/share/rclcpp/cmake)
+[2.597s] -- Found rosidl_generator_c: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[2.649s] -- Found rosidl_generator_cpp: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[2.701s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[2.767s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[3.078s] -- Found rmw_implementation_cmake: 7.3.2 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[3.087s] -- Found rmw_fastrtps_cpp: 8.4.3 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[3.371s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[3.714s] -- Found sensor_msgs: 5.3.6 (/opt/ros/jazzy/share/sensor_msgs/cmake)
+[4.166s] -- Found std_srvs: 5.3.6 (/opt/ros/jazzy/share/std_srvs/cmake)
+[4.954s] -- Configuring done (4.1s)
+[5.231s] -- Generating done (0.2s)
+[5.293s] -- Build files have been written to: /home/robotpi/ws_lidar/build/rplidar_ros
+[5.352s] Invoked command in '/home/robotpi/ws_lidar/build/rplidar_ros' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/robotpi/ws_lidar/install/imu_lidar_sensor_fusion:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/robotpi/ws_lidar/src/rplidar_ros -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/robotpi/ws_lidar/install/rplidar_ros
+[5.356s] Invoking command in '/home/robotpi/ws_lidar/build/rplidar_ros': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/robotpi/ws_lidar/install/imu_lidar_sensor_fusion:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/robotpi/ws_lidar/build/rplidar_ros -- -j4 -l4
+[5.796s] [  2%] [32m[1mLinking CXX executable rplidar_node[0m
+[8.360s] [ 47%] Built target rplidar_node
+[8.519s] [ 50%] [32m[1mLinking CXX executable rplidar_client[0m
+[10.225s] [ 52%] Built target rplidar_client
+[10.363s] [ 55%] [32m[1mLinking CXX executable rplidar_composition[0m
+[11.434s] [100%] Built target rplidar_composition
+[11.483s] Invoked command in '/home/robotpi/ws_lidar/build/rplidar_ros' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/robotpi/ws_lidar/install/imu_lidar_sensor_fusion:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/robotpi/ws_lidar/build/rplidar_ros -- -j4 -l4
+[11.486s] Invoking command in '/home/robotpi/ws_lidar/build/rplidar_ros': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/robotpi/ws_lidar/install/imu_lidar_sensor_fusion:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/robotpi/ws_lidar/build/rplidar_ros
+[11.515s] -- Install configuration: ""
+[11.517s] -- Execute custom install script
+[11.517s] -- Symlinking: /home/robotpi/ws_lidar/install/rplidar_ros/share/rplidar_ros/launch/rplidar_a1_launch.py
+[11.547s] -- Symlinking: /home/robotpi/ws_lidar/install/rplidar_ros/share/rplidar_ros/launch/rplidar_a2m12_launch.py
+[11.573s] -- Symlinking: /home/robotpi/ws_lidar/install/rplidar_ros/share/rplidar_ros/launch/rplidar_a2m7_launch.py
+[11.599s] -- Symlinking: /home/robotpi/ws_lidar/install/rplidar_ros/share/rplidar_ros/launch/rplidar_a2m8_launch.py
+[11.623s] -- Symlinking: /home/robotpi/ws_lidar/install/rplidar_ros/share/rplidar_ros/launch/rplidar_a3_launch.py
+[11.649s] -- Symlinking: /home/robotpi/ws_lidar/install/rplidar_ros/share/rplidar_ros/launch/rplidar_c1_launch.py
+[11.674s] -- Symlinking: /home/robotpi/ws_lidar/install/rplidar_ros/share/rplidar_ros/launch/rplidar_s1_launch.py
+[11.702s] -- Symlinking: /home/robotpi/ws_lidar/install/rplidar_ros/share/rplidar_ros/launch/rplidar_s1_tcp_launch.py
+[11.726s] -- Symlinking: /home/robotpi/ws_lidar/install/rplidar_ros/share/rplidar_ros/launch/rplidar_s2_launch.py
+[11.755s] -- Symlinking: /home/robotpi/ws_lidar/install/rplidar_ros/share/rplidar_ros/launch/rplidar_s2e_launch.py
+[11.780s] -- Symlinking: /home/robotpi/ws_lidar/install/rplidar_ros/share/rplidar_ros/launch/rplidar_s3_launch.py
+[11.808s] -- Symlinking: /home/robotpi/ws_lidar/install/rplidar_ros/share/rplidar_ros/launch/rplidar_t1_launch.py
+[11.834s] -- Symlinking: /home/robotpi/ws_lidar/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_a1_launch.py
+[11.863s] -- Symlinking: /home/robotpi/ws_lidar/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_a2m12_launch.py
+[11.890s] -- Symlinking: /home/robotpi/ws_lidar/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_a2m7_launch.py
+[11.921s] -- Symlinking: /home/robotpi/ws_lidar/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_a2m8_launch.py
+[11.947s] -- Symlinking: /home/robotpi/ws_lidar/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_a3_launch.py
+[11.976s] -- Symlinking: /home/robotpi/ws_lidar/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_c1_launch.py
+[12.016s] -- Symlinking: /home/robotpi/ws_lidar/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_s1_launch.py
+[12.054s] -- Symlinking: /home/robotpi/ws_lidar/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_s1_tcp_launch.py
+[12.087s] -- Symlinking: /home/robotpi/ws_lidar/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_s2_launch.py
+[12.114s] -- Symlinking: /home/robotpi/ws_lidar/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_s2e_launch.py
+[12.139s] -- Symlinking: /home/robotpi/ws_lidar/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_s3_launch.py
+[12.169s] -- Symlinking: /home/robotpi/ws_lidar/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_t1_launch.py
+[12.194s] -- Symlinking: /home/robotpi/ws_lidar/install/rplidar_ros/share/rplidar_ros/rviz/rplidar_ros.rviz
+[12.222s] -- Symlinking: /home/robotpi/ws_lidar/install/rplidar_ros/lib/rplidar_ros/rplidar_node
+[12.254s] -- Symlinking: /home/robotpi/ws_lidar/install/rplidar_ros/lib/rplidar_ros/rplidar_composition
+[12.286s] -- Symlinking: /home/robotpi/ws_lidar/install/rplidar_ros/lib/rplidar_ros/rplidar_client
+[12.317s] -- Symlinking: /home/robotpi/ws_lidar/install/rplidar_ros/share/ament_index/resource_index/package_run_dependencies/rplidar_ros
+[12.345s] -- Symlinking: /home/robotpi/ws_lidar/install/rplidar_ros/share/ament_index/resource_index/parent_prefix_path/rplidar_ros
+[12.377s] -- Symlinking: /home/robotpi/ws_lidar/install/rplidar_ros/share/rplidar_ros/environment/ament_prefix_path.sh
+[12.414s] -- Symlinking: /home/robotpi/ws_lidar/install/rplidar_ros/share/rplidar_ros/environment/ament_prefix_path.dsv
+[12.448s] -- Symlinking: /home/robotpi/ws_lidar/install/rplidar_ros/share/rplidar_ros/environment/path.sh
+[12.477s] -- Symlinking: /home/robotpi/ws_lidar/install/rplidar_ros/share/rplidar_ros/environment/path.dsv
+[12.504s] -- Symlinking: /home/robotpi/ws_lidar/install/rplidar_ros/share/rplidar_ros/local_setup.bash
+[12.532s] -- Symlinking: /home/robotpi/ws_lidar/install/rplidar_ros/share/rplidar_ros/local_setup.sh
+[12.562s] -- Symlinking: /home/robotpi/ws_lidar/install/rplidar_ros/share/rplidar_ros/local_setup.zsh
+[12.585s] -- Symlinking: /home/robotpi/ws_lidar/install/rplidar_ros/share/rplidar_ros/local_setup.dsv
+[12.613s] -- Symlinking: /home/robotpi/ws_lidar/install/rplidar_ros/share/rplidar_ros/package.dsv
+[12.640s] -- Symlinking: /home/robotpi/ws_lidar/install/rplidar_ros/share/ament_index/resource_index/packages/rplidar_ros
+[12.670s] -- Symlinking: /home/robotpi/ws_lidar/install/rplidar_ros/share/rplidar_ros/cmake/ament_cmake_export_dependencies-extras.cmake
+[12.696s] -- Symlinking: /home/robotpi/ws_lidar/install/rplidar_ros/share/rplidar_ros/cmake/ament_cmake_export_include_directories-extras.cmake
+[12.722s] -- Symlinking: /home/robotpi/ws_lidar/install/rplidar_ros/share/rplidar_ros/cmake/rplidar_rosConfig.cmake
+[12.751s] -- Symlinking: /home/robotpi/ws_lidar/install/rplidar_ros/share/rplidar_ros/cmake/rplidar_rosConfig-version.cmake
+[12.777s] -- Symlinking: /home/robotpi/ws_lidar/install/rplidar_ros/share/rplidar_ros/package.xml
+[12.809s] Invoked command in '/home/robotpi/ws_lidar/build/rplidar_ros' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/robotpi/ws_lidar/install/imu_lidar_sensor_fusion:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/robotpi/ws_lidar/build/rplidar_ros

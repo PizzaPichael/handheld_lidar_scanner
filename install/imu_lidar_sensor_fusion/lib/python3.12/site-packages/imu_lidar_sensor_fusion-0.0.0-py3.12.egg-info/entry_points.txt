@@ -1,0 +1,2 @@
+[console_scripts]
+fusion_calculation_node = imu_lidar_sensor_fusion.fusion_calculation_node:main

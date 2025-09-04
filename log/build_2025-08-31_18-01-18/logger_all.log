@@ -1,0 +1,275 @@
+[0.773s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.774s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=4, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0xffff9e633ce0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0xffff9e818650>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0xffff9e818650>>, mixin_verb=('build',))
+[1.168s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[1.169s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[1.169s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[1.169s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[1.169s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[1.170s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[1.170s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/robotpi/ws_lidar'
+[1.170s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[1.170s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[1.170s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[1.171s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[1.171s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[1.171s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[1.171s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[1.171s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[1.171s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[1.373s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[1.373s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[1.373s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[1.374s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[1.374s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[1.379s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[1.380s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[1.380s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[1.381s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[1.381s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[1.381s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[1.381s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[1.381s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[1.381s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[1.382s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[1.382s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[1.382s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[1.382s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[1.382s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[1.382s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[1.382s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[1.382s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[1.382s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[1.382s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[1.382s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[1.382s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[1.382s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[1.382s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[1.383s] Level 1:colcon.colcon_core.package_identification:_identify(src/build) by extensions ['ignore', 'ignore_ament_install']
+[1.383s] Level 1:colcon.colcon_core.package_identification:_identify(src/build) by extension 'ignore'
+[1.383s] Level 1:colcon.colcon_core.package_identification:_identify(src/build) ignored
+[1.383s] Level 1:colcon.colcon_core.package_identification:_identify(src/imu_lidar_sensor_fusion) by extensions ['ignore', 'ignore_ament_install']
+[1.383s] Level 1:colcon.colcon_core.package_identification:_identify(src/imu_lidar_sensor_fusion) by extension 'ignore'
+[1.383s] Level 1:colcon.colcon_core.package_identification:_identify(src/imu_lidar_sensor_fusion) by extension 'ignore_ament_install'
+[1.383s] Level 1:colcon.colcon_core.package_identification:_identify(src/imu_lidar_sensor_fusion) by extensions ['colcon_pkg']
+[1.383s] Level 1:colcon.colcon_core.package_identification:_identify(src/imu_lidar_sensor_fusion) by extension 'colcon_pkg'
+[1.384s] Level 1:colcon.colcon_core.package_identification:_identify(src/imu_lidar_sensor_fusion) by extensions ['colcon_meta']
+[1.384s] Level 1:colcon.colcon_core.package_identification:_identify(src/imu_lidar_sensor_fusion) by extension 'colcon_meta'
+[1.384s] Level 1:colcon.colcon_core.package_identification:_identify(src/imu_lidar_sensor_fusion) by extensions ['ros']
+[1.384s] Level 1:colcon.colcon_core.package_identification:_identify(src/imu_lidar_sensor_fusion) by extension 'ros'
+[1.406s] DEBUG:colcon.colcon_core.package_identification:Package 'src/imu_lidar_sensor_fusion' with type 'ros.ament_python' and name 'imu_lidar_sensor_fusion'
+[1.408s] Level 1:colcon.colcon_core.package_identification:_identify(src/install) by extensions ['ignore', 'ignore_ament_install']
+[1.409s] Level 1:colcon.colcon_core.package_identification:_identify(src/install) by extension 'ignore'
+[1.409s] Level 1:colcon.colcon_core.package_identification:_identify(src/install) ignored
+[1.409s] Level 1:colcon.colcon_core.package_identification:_identify(src/log) by extensions ['ignore', 'ignore_ament_install']
+[1.409s] Level 1:colcon.colcon_core.package_identification:_identify(src/log) by extension 'ignore'
+[1.409s] Level 1:colcon.colcon_core.package_identification:_identify(src/log) ignored
+[1.412s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_mpu6050_driver) by extensions ['ignore', 'ignore_ament_install']
+[1.413s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_mpu6050_driver) by extension 'ignore'
+[1.413s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_mpu6050_driver) by extension 'ignore_ament_install'
+[1.415s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_mpu6050_driver) by extensions ['colcon_pkg']
+[1.415s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_mpu6050_driver) by extension 'colcon_pkg'
+[1.415s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_mpu6050_driver) by extensions ['colcon_meta']
+[1.415s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_mpu6050_driver) by extension 'colcon_meta'
+[1.415s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_mpu6050_driver) by extensions ['ros']
+[1.416s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_mpu6050_driver) by extension 'ros'
+[1.419s] DEBUG:colcon.colcon_core.package_identification:Package 'src/ros2_mpu6050_driver' with type 'ros.ament_cmake' and name 'mpu6050driver'
+[1.420s] Level 1:colcon.colcon_core.package_identification:_identify(src/rplidar_ros) by extensions ['ignore', 'ignore_ament_install']
+[1.421s] Level 1:colcon.colcon_core.package_identification:_identify(src/rplidar_ros) by extension 'ignore'
+[1.422s] Level 1:colcon.colcon_core.package_identification:_identify(src/rplidar_ros) by extension 'ignore_ament_install'
+[1.423s] Level 1:colcon.colcon_core.package_identification:_identify(src/rplidar_ros) by extensions ['colcon_pkg']
+[1.423s] Level 1:colcon.colcon_core.package_identification:_identify(src/rplidar_ros) by extension 'colcon_pkg'
+[1.423s] Level 1:colcon.colcon_core.package_identification:_identify(src/rplidar_ros) by extensions ['colcon_meta']
+[1.423s] Level 1:colcon.colcon_core.package_identification:_identify(src/rplidar_ros) by extension 'colcon_meta'
+[1.423s] Level 1:colcon.colcon_core.package_identification:_identify(src/rplidar_ros) by extensions ['ros']
+[1.424s] Level 1:colcon.colcon_core.package_identification:_identify(src/rplidar_ros) by extension 'ros'
+[1.428s] DEBUG:colcon.colcon_core.package_identification:Package 'src/rplidar_ros' with type 'ros.ament_cmake' and name 'rplidar_ros'
+[1.428s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[1.429s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[1.429s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[1.429s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[1.430s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[1.587s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[1.587s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[1.598s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/robotpi/ws_lidar/install/sllidar_ros2' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[1.598s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/robotpi/ws_lidar/install/rplidar_ros' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[1.599s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/robotpi/ws_lidar/install/mpu6050driver' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[1.601s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/robotpi/ws_lidar/install/imu_lidar_sensor_fusion' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[1.603s] WARNING:colcon.colcon_ros.prefix_path.catkin:The path '/home/robotpi/ws_lidar/install/sllidar_ros2' in the environment variable CMAKE_PREFIX_PATH doesn't exist
+[1.604s] WARNING:colcon.colcon_ros.prefix_path.catkin:The path '/home/robotpi/ws_lidar/install/rplidar_ros' in the environment variable CMAKE_PREFIX_PATH doesn't exist
+[1.606s] WARNING:colcon.colcon_ros.prefix_path.catkin:The path '/home/robotpi/ws_lidar/install/mpu6050driver' in the environment variable CMAKE_PREFIX_PATH doesn't exist
+[1.617s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 0 installed packages in /home/robotpi/ws_lidar/install
+[1.628s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 295 installed packages in /opt/ros/jazzy
+[1.641s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[2.087s] Level 5:colcon.colcon_core.verb:set package 'imu_lidar_sensor_fusion' build argument 'cmake_args' from command line to 'None'
+[2.087s] Level 5:colcon.colcon_core.verb:set package 'imu_lidar_sensor_fusion' build argument 'cmake_target' from command line to 'None'
+[2.087s] Level 5:colcon.colcon_core.verb:set package 'imu_lidar_sensor_fusion' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[2.087s] Level 5:colcon.colcon_core.verb:set package 'imu_lidar_sensor_fusion' build argument 'cmake_clean_cache' from command line to 'False'
+[2.088s] Level 5:colcon.colcon_core.verb:set package 'imu_lidar_sensor_fusion' build argument 'cmake_clean_first' from command line to 'False'
+[2.088s] Level 5:colcon.colcon_core.verb:set package 'imu_lidar_sensor_fusion' build argument 'cmake_force_configure' from command line to 'False'
+[2.088s] Level 5:colcon.colcon_core.verb:set package 'imu_lidar_sensor_fusion' build argument 'ament_cmake_args' from command line to 'None'
+[2.088s] Level 5:colcon.colcon_core.verb:set package 'imu_lidar_sensor_fusion' build argument 'catkin_cmake_args' from command line to 'None'
+[2.090s] Level 5:colcon.colcon_core.verb:set package 'imu_lidar_sensor_fusion' build argument 'catkin_skip_building_tests' from command line to 'False'
+[2.090s] DEBUG:colcon.colcon_core.verb:Building package 'imu_lidar_sensor_fusion' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/robotpi/ws_lidar/build/imu_lidar_sensor_fusion', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/robotpi/ws_lidar/install/imu_lidar_sensor_fusion', 'merge_install': False, 'path': '/home/robotpi/ws_lidar/src/imu_lidar_sensor_fusion', 'symlink_install': False, 'test_result_base': None}
+[2.092s] Level 5:colcon.colcon_core.verb:set package 'mpu6050driver' build argument 'cmake_args' from command line to 'None'
+[2.092s] Level 5:colcon.colcon_core.verb:set package 'mpu6050driver' build argument 'cmake_target' from command line to 'None'
+[2.092s] Level 5:colcon.colcon_core.verb:set package 'mpu6050driver' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[2.092s] Level 5:colcon.colcon_core.verb:set package 'mpu6050driver' build argument 'cmake_clean_cache' from command line to 'False'
+[2.092s] Level 5:colcon.colcon_core.verb:set package 'mpu6050driver' build argument 'cmake_clean_first' from command line to 'False'
+[2.092s] Level 5:colcon.colcon_core.verb:set package 'mpu6050driver' build argument 'cmake_force_configure' from command line to 'False'
+[2.092s] Level 5:colcon.colcon_core.verb:set package 'mpu6050driver' build argument 'ament_cmake_args' from command line to 'None'
+[2.092s] Level 5:colcon.colcon_core.verb:set package 'mpu6050driver' build argument 'catkin_cmake_args' from command line to 'None'
+[2.092s] Level 5:colcon.colcon_core.verb:set package 'mpu6050driver' build argument 'catkin_skip_building_tests' from command line to 'False'
+[2.092s] DEBUG:colcon.colcon_core.verb:Building package 'mpu6050driver' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/robotpi/ws_lidar/build/mpu6050driver', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/robotpi/ws_lidar/install/mpu6050driver', 'merge_install': False, 'path': '/home/robotpi/ws_lidar/src/ros2_mpu6050_driver', 'symlink_install': False, 'test_result_base': None}
+[2.097s] Level 5:colcon.colcon_core.verb:set package 'rplidar_ros' build argument 'cmake_args' from command line to 'None'
+[2.097s] Level 5:colcon.colcon_core.verb:set package 'rplidar_ros' build argument 'cmake_target' from command line to 'None'
+[2.097s] Level 5:colcon.colcon_core.verb:set package 'rplidar_ros' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[2.097s] Level 5:colcon.colcon_core.verb:set package 'rplidar_ros' build argument 'cmake_clean_cache' from command line to 'False'
+[2.097s] Level 5:colcon.colcon_core.verb:set package 'rplidar_ros' build argument 'cmake_clean_first' from command line to 'False'
+[2.097s] Level 5:colcon.colcon_core.verb:set package 'rplidar_ros' build argument 'cmake_force_configure' from command line to 'False'
+[2.097s] Level 5:colcon.colcon_core.verb:set package 'rplidar_ros' build argument 'ament_cmake_args' from command line to 'None'
+[2.097s] Level 5:colcon.colcon_core.verb:set package 'rplidar_ros' build argument 'catkin_cmake_args' from command line to 'None'
+[2.097s] Level 5:colcon.colcon_core.verb:set package 'rplidar_ros' build argument 'catkin_skip_building_tests' from command line to 'False'
+[2.098s] DEBUG:colcon.colcon_core.verb:Building package 'rplidar_ros' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/robotpi/ws_lidar/build/rplidar_ros', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/robotpi/ws_lidar/install/rplidar_ros', 'merge_install': False, 'path': '/home/robotpi/ws_lidar/src/rplidar_ros', 'symlink_install': False, 'test_result_base': None}
+[2.098s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[2.103s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[2.104s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/robotpi/ws_lidar/src/imu_lidar_sensor_fusion' with build type 'ament_python'
+[2.105s] Level 1:colcon.colcon_core.shell:create_environment_hook('imu_lidar_sensor_fusion', 'ament_prefix_path')
+[2.130s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[2.131s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robotpi/ws_lidar/install/imu_lidar_sensor_fusion/share/imu_lidar_sensor_fusion/hook/ament_prefix_path.ps1'
+[2.135s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/robotpi/ws_lidar/install/imu_lidar_sensor_fusion/share/imu_lidar_sensor_fusion/hook/ament_prefix_path.dsv'
+[2.140s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robotpi/ws_lidar/install/imu_lidar_sensor_fusion/share/imu_lidar_sensor_fusion/hook/ament_prefix_path.sh'
+[2.142s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.142s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.164s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/robotpi/ws_lidar/src/ros2_mpu6050_driver' with build type 'ament_cmake'
+[2.165s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/robotpi/ws_lidar/src/ros2_mpu6050_driver'
+[2.166s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.166s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.194s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/robotpi/ws_lidar/src/rplidar_ros' with build type 'ament_cmake'
+[2.195s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/robotpi/ws_lidar/src/rplidar_ros'
+[2.196s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.196s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[3.165s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/robotpi/ws_lidar/src/imu_lidar_sensor_fusion'
+[3.166s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[3.166s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[3.191s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/robotpi/ws_lidar/build/mpu6050driver': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/robotpi/ws_lidar/install/imu_lidar_sensor_fusion:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/robotpi/ws_lidar/src/ros2_mpu6050_driver -DCMAKE_INSTALL_PREFIX=/home/robotpi/ws_lidar/install/mpu6050driver
+[3.235s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/robotpi/ws_lidar/build/rplidar_ros': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/robotpi/ws_lidar/install/imu_lidar_sensor_fusion:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/robotpi/ws_lidar/src/rplidar_ros -DCMAKE_INSTALL_PREFIX=/home/robotpi/ws_lidar/install/rplidar_ros
+[7.753s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/robotpi/ws_lidar/src/imu_lidar_sensor_fusion': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/robotpi/ws_lidar/build/imu_lidar_sensor_fusion/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/robotpi/ws_lidar/install/imu_lidar_sensor_fusion/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/imu_lidar_sensor_fusion build --build-base /home/robotpi/ws_lidar/build/imu_lidar_sensor_fusion/build install --record /home/robotpi/ws_lidar/build/imu_lidar_sensor_fusion/install.log --single-version-externally-managed install_data
+[9.494s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/robotpi/ws_lidar/src/imu_lidar_sensor_fusion' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/robotpi/ws_lidar/build/imu_lidar_sensor_fusion/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/robotpi/ws_lidar/install/imu_lidar_sensor_fusion/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/imu_lidar_sensor_fusion build --build-base /home/robotpi/ws_lidar/build/imu_lidar_sensor_fusion/build install --record /home/robotpi/ws_lidar/build/imu_lidar_sensor_fusion/install.log --single-version-externally-managed install_data
+[9.543s] Level 1:colcon.colcon_core.environment:checking '/home/robotpi/ws_lidar/install/imu_lidar_sensor_fusion' for CMake module files
+[9.545s] Level 1:colcon.colcon_core.environment:checking '/home/robotpi/ws_lidar/install/imu_lidar_sensor_fusion' for CMake config files
+[9.547s] Level 1:colcon.colcon_core.environment:checking '/home/robotpi/ws_lidar/install/imu_lidar_sensor_fusion/lib'
+[9.547s] Level 1:colcon.colcon_core.environment:checking '/home/robotpi/ws_lidar/install/imu_lidar_sensor_fusion/bin'
+[9.547s] Level 1:colcon.colcon_core.environment:checking '/home/robotpi/ws_lidar/install/imu_lidar_sensor_fusion/lib/pkgconfig/imu_lidar_sensor_fusion.pc'
+[9.548s] Level 1:colcon.colcon_core.environment:checking '/home/robotpi/ws_lidar/install/imu_lidar_sensor_fusion/lib/python3.12/site-packages'
+[9.548s] Level 1:colcon.colcon_core.shell:create_environment_hook('imu_lidar_sensor_fusion', 'pythonpath')
+[9.548s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robotpi/ws_lidar/install/imu_lidar_sensor_fusion/share/imu_lidar_sensor_fusion/hook/pythonpath.ps1'
+[9.550s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/robotpi/ws_lidar/install/imu_lidar_sensor_fusion/share/imu_lidar_sensor_fusion/hook/pythonpath.dsv'
+[9.551s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robotpi/ws_lidar/install/imu_lidar_sensor_fusion/share/imu_lidar_sensor_fusion/hook/pythonpath.sh'
+[9.553s] Level 1:colcon.colcon_core.environment:checking '/home/robotpi/ws_lidar/install/imu_lidar_sensor_fusion/bin'
+[9.553s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(imu_lidar_sensor_fusion)
+[9.554s] INFO:colcon.colcon_core.shell:Creating package script '/home/robotpi/ws_lidar/install/imu_lidar_sensor_fusion/share/imu_lidar_sensor_fusion/package.ps1'
+[9.563s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/robotpi/ws_lidar/install/imu_lidar_sensor_fusion/share/imu_lidar_sensor_fusion/package.dsv'
+[9.566s] INFO:colcon.colcon_core.shell:Creating package script '/home/robotpi/ws_lidar/install/imu_lidar_sensor_fusion/share/imu_lidar_sensor_fusion/package.sh'
+[9.568s] INFO:colcon.colcon_core.shell:Creating package script '/home/robotpi/ws_lidar/install/imu_lidar_sensor_fusion/share/imu_lidar_sensor_fusion/package.bash'
+[9.572s] INFO:colcon.colcon_core.shell:Creating package script '/home/robotpi/ws_lidar/install/imu_lidar_sensor_fusion/share/imu_lidar_sensor_fusion/package.zsh'
+[9.574s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/robotpi/ws_lidar/install/imu_lidar_sensor_fusion/share/colcon-core/packages/imu_lidar_sensor_fusion)
+[10.700s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/robotpi/ws_lidar/build/mpu6050driver' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/robotpi/ws_lidar/install/imu_lidar_sensor_fusion:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/robotpi/ws_lidar/src/ros2_mpu6050_driver -DCMAKE_INSTALL_PREFIX=/home/robotpi/ws_lidar/install/mpu6050driver
+[10.707s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/robotpi/ws_lidar/build/mpu6050driver': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/robotpi/ws_lidar/install/imu_lidar_sensor_fusion:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/robotpi/ws_lidar/build/mpu6050driver -- -j4 -l4
+[10.733s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/robotpi/ws_lidar/build/rplidar_ros' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/robotpi/ws_lidar/install/imu_lidar_sensor_fusion:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/robotpi/ws_lidar/src/rplidar_ros -DCMAKE_INSTALL_PREFIX=/home/robotpi/ws_lidar/install/rplidar_ros
+[10.734s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/robotpi/ws_lidar/build/rplidar_ros': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/robotpi/ws_lidar/install/imu_lidar_sensor_fusion:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/robotpi/ws_lidar/build/rplidar_ros -- -j4 -l4
+[70.926s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/robotpi/ws_lidar/build/mpu6050driver' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/robotpi/ws_lidar/install/imu_lidar_sensor_fusion:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/robotpi/ws_lidar/build/mpu6050driver -- -j4 -l4
+[70.967s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/robotpi/ws_lidar/build/mpu6050driver': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/robotpi/ws_lidar/install/imu_lidar_sensor_fusion:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/robotpi/ws_lidar/build/mpu6050driver
+[71.033s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(mpu6050driver)
+[71.034s] Level 1:colcon.colcon_core.environment:checking '/home/robotpi/ws_lidar/install/mpu6050driver' for CMake module files
+[71.034s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/robotpi/ws_lidar/build/mpu6050driver' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/robotpi/ws_lidar/install/imu_lidar_sensor_fusion:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/robotpi/ws_lidar/build/mpu6050driver
+[71.035s] Level 1:colcon.colcon_core.environment:checking '/home/robotpi/ws_lidar/install/mpu6050driver' for CMake config files
+[71.035s] Level 1:colcon.colcon_core.shell:create_environment_hook('mpu6050driver', 'cmake_prefix_path')
+[71.035s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robotpi/ws_lidar/install/mpu6050driver/share/mpu6050driver/hook/cmake_prefix_path.ps1'
+[71.052s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/robotpi/ws_lidar/install/mpu6050driver/share/mpu6050driver/hook/cmake_prefix_path.dsv'
+[71.055s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robotpi/ws_lidar/install/mpu6050driver/share/mpu6050driver/hook/cmake_prefix_path.sh'
+[71.057s] Level 1:colcon.colcon_core.environment:checking '/home/robotpi/ws_lidar/install/mpu6050driver/lib'
+[71.058s] Level 1:colcon.colcon_core.environment:checking '/home/robotpi/ws_lidar/install/mpu6050driver/bin'
+[71.058s] Level 1:colcon.colcon_core.environment:checking '/home/robotpi/ws_lidar/install/mpu6050driver/lib/pkgconfig/mpu6050driver.pc'
+[71.059s] Level 1:colcon.colcon_core.environment:checking '/home/robotpi/ws_lidar/install/mpu6050driver/lib/python3.12/site-packages'
+[71.059s] Level 1:colcon.colcon_core.environment:checking '/home/robotpi/ws_lidar/install/mpu6050driver/bin'
+[71.060s] INFO:colcon.colcon_core.shell:Creating package script '/home/robotpi/ws_lidar/install/mpu6050driver/share/mpu6050driver/package.ps1'
+[71.062s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/robotpi/ws_lidar/install/mpu6050driver/share/mpu6050driver/package.dsv'
+[71.063s] INFO:colcon.colcon_core.shell:Creating package script '/home/robotpi/ws_lidar/install/mpu6050driver/share/mpu6050driver/package.sh'
+[71.066s] INFO:colcon.colcon_core.shell:Creating package script '/home/robotpi/ws_lidar/install/mpu6050driver/share/mpu6050driver/package.bash'
+[71.075s] INFO:colcon.colcon_core.shell:Creating package script '/home/robotpi/ws_lidar/install/mpu6050driver/share/mpu6050driver/package.zsh'
+[71.080s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/robotpi/ws_lidar/install/mpu6050driver/share/colcon-core/packages/mpu6050driver)
+[71.082s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(mpu6050driver)
+[71.083s] Level 1:colcon.colcon_core.environment:checking '/home/robotpi/ws_lidar/install/mpu6050driver' for CMake module files
+[71.086s] Level 1:colcon.colcon_core.environment:checking '/home/robotpi/ws_lidar/install/mpu6050driver' for CMake config files
+[71.087s] Level 1:colcon.colcon_core.shell:create_environment_hook('mpu6050driver', 'cmake_prefix_path')
+[71.087s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robotpi/ws_lidar/install/mpu6050driver/share/mpu6050driver/hook/cmake_prefix_path.ps1'
+[71.089s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/robotpi/ws_lidar/install/mpu6050driver/share/mpu6050driver/hook/cmake_prefix_path.dsv'
+[71.092s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robotpi/ws_lidar/install/mpu6050driver/share/mpu6050driver/hook/cmake_prefix_path.sh'
+[71.094s] Level 1:colcon.colcon_core.environment:checking '/home/robotpi/ws_lidar/install/mpu6050driver/lib'
+[71.095s] Level 1:colcon.colcon_core.environment:checking '/home/robotpi/ws_lidar/install/mpu6050driver/bin'
+[71.095s] Level 1:colcon.colcon_core.environment:checking '/home/robotpi/ws_lidar/install/mpu6050driver/lib/pkgconfig/mpu6050driver.pc'
+[71.095s] Level 1:colcon.colcon_core.environment:checking '/home/robotpi/ws_lidar/install/mpu6050driver/lib/python3.12/site-packages'
+[71.096s] Level 1:colcon.colcon_core.environment:checking '/home/robotpi/ws_lidar/install/mpu6050driver/bin'
+[71.096s] INFO:colcon.colcon_core.shell:Creating package script '/home/robotpi/ws_lidar/install/mpu6050driver/share/mpu6050driver/package.ps1'
+[71.098s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/robotpi/ws_lidar/install/mpu6050driver/share/mpu6050driver/package.dsv'
+[71.099s] INFO:colcon.colcon_core.shell:Creating package script '/home/robotpi/ws_lidar/install/mpu6050driver/share/mpu6050driver/package.sh'
+[71.100s] INFO:colcon.colcon_core.shell:Creating package script '/home/robotpi/ws_lidar/install/mpu6050driver/share/mpu6050driver/package.bash'
+[71.101s] INFO:colcon.colcon_core.shell:Creating package script '/home/robotpi/ws_lidar/install/mpu6050driver/share/mpu6050driver/package.zsh'
+[71.102s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/robotpi/ws_lidar/install/mpu6050driver/share/colcon-core/packages/mpu6050driver)
+[150.530s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/robotpi/ws_lidar/build/rplidar_ros' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/robotpi/ws_lidar/install/imu_lidar_sensor_fusion:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/robotpi/ws_lidar/build/rplidar_ros -- -j4 -l4
+[150.533s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/robotpi/ws_lidar/build/rplidar_ros': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/robotpi/ws_lidar/install/imu_lidar_sensor_fusion:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/robotpi/ws_lidar/build/rplidar_ros
+[150.672s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(rplidar_ros)
+[150.673s] Level 1:colcon.colcon_core.environment:checking '/home/robotpi/ws_lidar/install/rplidar_ros' for CMake module files
+[150.682s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/robotpi/ws_lidar/build/rplidar_ros' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/robotpi/ws_lidar/install/imu_lidar_sensor_fusion:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/robotpi/ws_lidar/build/rplidar_ros
+[150.695s] Level 1:colcon.colcon_core.environment:checking '/home/robotpi/ws_lidar/install/rplidar_ros' for CMake config files
+[150.701s] Level 1:colcon.colcon_core.shell:create_environment_hook('rplidar_ros', 'cmake_prefix_path')
+[150.701s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robotpi/ws_lidar/install/rplidar_ros/share/rplidar_ros/hook/cmake_prefix_path.ps1'
+[150.702s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/robotpi/ws_lidar/install/rplidar_ros/share/rplidar_ros/hook/cmake_prefix_path.dsv'
+[150.703s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robotpi/ws_lidar/install/rplidar_ros/share/rplidar_ros/hook/cmake_prefix_path.sh'
+[150.709s] Level 1:colcon.colcon_core.environment:checking '/home/robotpi/ws_lidar/install/rplidar_ros/lib'
+[150.710s] Level 1:colcon.colcon_core.environment:checking '/home/robotpi/ws_lidar/install/rplidar_ros/bin'
+[150.718s] Level 1:colcon.colcon_core.environment:checking '/home/robotpi/ws_lidar/install/rplidar_ros/lib/pkgconfig/rplidar_ros.pc'
+[150.722s] Level 1:colcon.colcon_core.environment:checking '/home/robotpi/ws_lidar/install/rplidar_ros/lib/python3.12/site-packages'
+[150.723s] Level 1:colcon.colcon_core.environment:checking '/home/robotpi/ws_lidar/install/rplidar_ros/bin'
+[150.723s] INFO:colcon.colcon_core.shell:Creating package script '/home/robotpi/ws_lidar/install/rplidar_ros/share/rplidar_ros/package.ps1'
+[150.726s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/robotpi/ws_lidar/install/rplidar_ros/share/rplidar_ros/package.dsv'
+[150.731s] INFO:colcon.colcon_core.shell:Creating package script '/home/robotpi/ws_lidar/install/rplidar_ros/share/rplidar_ros/package.sh'
+[150.733s] INFO:colcon.colcon_core.shell:Creating package script '/home/robotpi/ws_lidar/install/rplidar_ros/share/rplidar_ros/package.bash'
+[150.734s] INFO:colcon.colcon_core.shell:Creating package script '/home/robotpi/ws_lidar/install/rplidar_ros/share/rplidar_ros/package.zsh'
+[150.734s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/robotpi/ws_lidar/install/rplidar_ros/share/colcon-core/packages/rplidar_ros)
+[150.735s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(rplidar_ros)
+[150.736s] Level 1:colcon.colcon_core.environment:checking '/home/robotpi/ws_lidar/install/rplidar_ros' for CMake module files
+[150.738s] Level 1:colcon.colcon_core.environment:checking '/home/robotpi/ws_lidar/install/rplidar_ros' for CMake config files
+[150.739s] Level 1:colcon.colcon_core.shell:create_environment_hook('rplidar_ros', 'cmake_prefix_path')
+[150.740s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robotpi/ws_lidar/install/rplidar_ros/share/rplidar_ros/hook/cmake_prefix_path.ps1'
+[150.741s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/robotpi/ws_lidar/install/rplidar_ros/share/rplidar_ros/hook/cmake_prefix_path.dsv'
+[150.744s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/robotpi/ws_lidar/install/rplidar_ros/share/rplidar_ros/hook/cmake_prefix_path.sh'
+[150.751s] Level 1:colcon.colcon_core.environment:checking '/home/robotpi/ws_lidar/install/rplidar_ros/lib'
+[150.751s] Level 1:colcon.colcon_core.environment:checking '/home/robotpi/ws_lidar/install/rplidar_ros/bin'
+[150.751s] Level 1:colcon.colcon_core.environment:checking '/home/robotpi/ws_lidar/install/rplidar_ros/lib/pkgconfig/rplidar_ros.pc'
+[150.752s] Level 1:colcon.colcon_core.environment:checking '/home/robotpi/ws_lidar/install/rplidar_ros/lib/python3.12/site-packages'
+[150.752s] Level 1:colcon.colcon_core.environment:checking '/home/robotpi/ws_lidar/install/rplidar_ros/bin'
+[150.753s] INFO:colcon.colcon_core.shell:Creating package script '/home/robotpi/ws_lidar/install/rplidar_ros/share/rplidar_ros/package.ps1'
+[150.758s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/robotpi/ws_lidar/install/rplidar_ros/share/rplidar_ros/package.dsv'
+[150.760s] INFO:colcon.colcon_core.shell:Creating package script '/home/robotpi/ws_lidar/install/rplidar_ros/share/rplidar_ros/package.sh'
+[150.763s] INFO:colcon.colcon_core.shell:Creating package script '/home/robotpi/ws_lidar/install/rplidar_ros/share/rplidar_ros/package.bash'
+[150.764s] INFO:colcon.colcon_core.shell:Creating package script '/home/robotpi/ws_lidar/install/rplidar_ros/share/rplidar_ros/package.zsh'
+[150.769s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/robotpi/ws_lidar/install/rplidar_ros/share/colcon-core/packages/rplidar_ros)
+[150.772s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[150.773s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[150.773s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[150.773s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[150.830s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[150.831s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[150.831s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[151.067s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[151.067s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/robotpi/ws_lidar/install/local_setup.ps1'
+[151.070s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/robotpi/ws_lidar/install/_local_setup_util_ps1.py'
+[151.074s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/robotpi/ws_lidar/install/setup.ps1'
+[151.078s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/robotpi/ws_lidar/install/local_setup.sh'
+[151.080s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/robotpi/ws_lidar/install/_local_setup_util_sh.py'
+[151.081s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/robotpi/ws_lidar/install/setup.sh'
+[151.085s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/robotpi/ws_lidar/install/local_setup.bash'
+[151.088s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/robotpi/ws_lidar/install/setup.bash'
+[151.093s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/robotpi/ws_lidar/install/local_setup.zsh'
+[151.096s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/robotpi/ws_lidar/install/setup.zsh'

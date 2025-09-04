@@ -1,0 +1,17 @@
+use_sim_time: false
+
+slam_toolbox:
+  mode: "mapping"               # "mapping" für Live-Kartierung, "localization" für Lokalisierung
+  map_file_name: ""             # leer, weil wir live mappen
+  resolution: 0.05              # Kartengittergröße in Metern
+  max_laser_range: 12.0         # maximaler Lidar-Bereich (m)
+  minimum_time_interval: 0.5    # minimale Zeit zwischen zwei Pose-Updates
+  transform_publish_period: 0.02 # TF Veröffentlichung in Sekunden
+  odom_frame: "odom"            # Frame des Odometry
+  map_frame: "map"              # Frame der Karte
+  base_frame: "base_link"       # Frame des Roboters/IMU
+  scan_topic: "scan"            # Lidar-Topic
+  use_scan_matching: true       # scan-to-map Optimierung
+  publish_map: true             # Karte wird in RViz publiziert
+  pose_publish_period: 0.05     # Pose Veröffentlichung
+  map_update_interval: 0.5      # Karte wird alle 0.5s aktualisiert

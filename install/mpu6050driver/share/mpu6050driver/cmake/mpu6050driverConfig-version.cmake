@@ -1,0 +1,1 @@
+/home/robotpi/ws_lidar/build/mpu6050driver/ament_cmake_core/mpu6050driverConfig-version.cmake

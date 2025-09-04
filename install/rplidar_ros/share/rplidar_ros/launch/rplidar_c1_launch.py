@@ -1,0 +1,1 @@
+/home/robotpi/ws_lidar/src/rplidar_ros/launch/rplidar_c1_launch.py

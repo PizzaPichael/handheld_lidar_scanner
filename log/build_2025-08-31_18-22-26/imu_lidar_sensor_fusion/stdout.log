@@ -1,0 +1,19 @@
+running develop
+running egg_info
+writing imu_lidar_sensor_fusion.egg-info/PKG-INFO
+writing dependency_links to imu_lidar_sensor_fusion.egg-info/dependency_links.txt
+writing entry points to imu_lidar_sensor_fusion.egg-info/entry_points.txt
+writing requirements to imu_lidar_sensor_fusion.egg-info/requires.txt
+writing top-level names to imu_lidar_sensor_fusion.egg-info/top_level.txt
+reading manifest file 'imu_lidar_sensor_fusion.egg-info/SOURCES.txt'
+writing manifest file 'imu_lidar_sensor_fusion.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/robotpi/ws_lidar/install/imu_lidar_sensor_fusion/lib/python3.12/site-packages/imu-lidar-sensor-fusion.egg-link (link to .)
+Installing fusion_calculation_node script to /home/robotpi/ws_lidar/install/imu_lidar_sensor_fusion/lib/imu_lidar_sensor_fusion
+
+Installed /home/robotpi/ws_lidar/build/imu_lidar_sensor_fusion
+running symlink_data
+symbolically linking /home/robotpi/ws_lidar/build/imu_lidar_sensor_fusion/resource/imu_lidar_sensor_fusion -> /home/robotpi/ws_lidar/install/imu_lidar_sensor_fusion/share/ament_index/resource_index/packages
+symbolically linking /home/robotpi/ws_lidar/build/imu_lidar_sensor_fusion/package.xml -> /home/robotpi/ws_lidar/install/imu_lidar_sensor_fusion/share/imu_lidar_sensor_fusion
+symbolically linking /home/robotpi/ws_lidar/build/imu_lidar_sensor_fusion/launch/__init__.py -> /home/robotpi/ws_lidar/install/imu_lidar_sensor_fusion/share/imu_lidar_sensor_fusion/launch
+symbolically linking /home/robotpi/ws_lidar/build/imu_lidar_sensor_fusion/launch/fusion_launch.py -> /home/robotpi/ws_lidar/install/imu_lidar_sensor_fusion/share/imu_lidar_sensor_fusion/launch

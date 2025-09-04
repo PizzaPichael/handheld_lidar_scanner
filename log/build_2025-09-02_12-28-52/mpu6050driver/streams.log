@@ -1,0 +1,25 @@
+[0.631s] Invoking command in '/home/robotpi/ws_lidar/build/mpu6050driver': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/robotpi/ws_lidar/install/imu_lidar_sensor_fusion:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/robotpi/ws_lidar/build/mpu6050driver -- -j4 -l4
+[1.359s] [100%] Built target mpu6050driver
+[1.399s] Invoked command in '/home/robotpi/ws_lidar/build/mpu6050driver' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/robotpi/ws_lidar/install/imu_lidar_sensor_fusion:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/robotpi/ws_lidar/build/mpu6050driver -- -j4 -l4
+[1.462s] Invoking command in '/home/robotpi/ws_lidar/build/mpu6050driver': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/robotpi/ws_lidar/install/imu_lidar_sensor_fusion:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/robotpi/ws_lidar/build/mpu6050driver
+[1.540s] -- Install configuration: ""
+[1.550s] -- Execute custom install script
+[1.553s] -- Up-to-date symlink: /home/robotpi/ws_lidar/install/mpu6050driver/lib/mpu6050driver/mpu6050driver
+[1.561s] -- Up-to-date symlink: /home/robotpi/ws_lidar/install/mpu6050driver/share/mpu6050driver//launch/mpu6050driver_launch.py
+[1.561s] -- Up-to-date symlink: /home/robotpi/ws_lidar/install/mpu6050driver/share/mpu6050driver//params/mpu6050.yaml
+[1.562s] -- Up-to-date symlink: /home/robotpi/ws_lidar/install/mpu6050driver/share/ament_index/resource_index/package_run_dependencies/mpu6050driver
+[1.566s] -- Up-to-date symlink: /home/robotpi/ws_lidar/install/mpu6050driver/share/ament_index/resource_index/parent_prefix_path/mpu6050driver
+[1.568s] -- Up-to-date symlink: /home/robotpi/ws_lidar/install/mpu6050driver/share/mpu6050driver/environment/ament_prefix_path.sh
+[1.572s] -- Up-to-date symlink: /home/robotpi/ws_lidar/install/mpu6050driver/share/mpu6050driver/environment/ament_prefix_path.dsv
+[1.574s] -- Up-to-date symlink: /home/robotpi/ws_lidar/install/mpu6050driver/share/mpu6050driver/environment/path.sh
+[1.575s] -- Up-to-date symlink: /home/robotpi/ws_lidar/install/mpu6050driver/share/mpu6050driver/environment/path.dsv
+[1.580s] -- Up-to-date symlink: /home/robotpi/ws_lidar/install/mpu6050driver/share/mpu6050driver/local_setup.bash
+[1.581s] -- Up-to-date symlink: /home/robotpi/ws_lidar/install/mpu6050driver/share/mpu6050driver/local_setup.sh
+[1.581s] -- Up-to-date symlink: /home/robotpi/ws_lidar/install/mpu6050driver/share/mpu6050driver/local_setup.zsh
+[1.583s] -- Up-to-date symlink: /home/robotpi/ws_lidar/install/mpu6050driver/share/mpu6050driver/local_setup.dsv
+[1.584s] -- Symlinking: /home/robotpi/ws_lidar/install/mpu6050driver/share/mpu6050driver/package.dsv
+[1.627s] -- Up-to-date symlink: /home/robotpi/ws_lidar/install/mpu6050driver/share/ament_index/resource_index/packages/mpu6050driver
+[1.628s] -- Up-to-date symlink: /home/robotpi/ws_lidar/install/mpu6050driver/share/mpu6050driver/cmake/mpu6050driverConfig.cmake
+[1.629s] -- Up-to-date symlink: /home/robotpi/ws_lidar/install/mpu6050driver/share/mpu6050driver/cmake/mpu6050driverConfig-version.cmake
+[1.629s] -- Up-to-date symlink: /home/robotpi/ws_lidar/install/mpu6050driver/share/mpu6050driver/package.xml
+[1.644s] Invoked command in '/home/robotpi/ws_lidar/build/mpu6050driver' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/robotpi/ws_lidar/install/imu_lidar_sensor_fusion:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/robotpi/ws_lidar/build/mpu6050driver

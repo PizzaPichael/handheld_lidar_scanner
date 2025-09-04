@@ -1,0 +1,281 @@
+[0.000000] (-) TimerEvent: {}
+[0.004167] (imu_lidar_sensor_fusion) JobQueued: {'identifier': 'imu_lidar_sensor_fusion', 'dependencies': OrderedDict()}
+[0.004357] (mpu6050driver) JobQueued: {'identifier': 'mpu6050driver', 'dependencies': OrderedDict()}
+[0.004388] (rplidar_ros) JobQueued: {'identifier': 'rplidar_ros', 'dependencies': OrderedDict()}
+[0.010038] (imu_lidar_sensor_fusion) JobStarted: {'identifier': 'imu_lidar_sensor_fusion'}
+[0.047814] (mpu6050driver) JobStarted: {'identifier': 'mpu6050driver'}
+[0.068734] (rplidar_ros) JobStarted: {'identifier': 'rplidar_ros'}
+[0.099781] (-) TimerEvent: {}
+[0.200308] (-) TimerEvent: {}
+[0.300918] (-) TimerEvent: {}
+[0.401420] (-) TimerEvent: {}
+[0.501782] (-) TimerEvent: {}
+[0.602318] (-) TimerEvent: {}
+[0.702920] (-) TimerEvent: {}
+[0.800285] (mpu6050driver) JobProgress: {'identifier': 'mpu6050driver', 'progress': 'cmake'}
+[0.800430] (mpu6050driver) Command: {'cmd': ['/usr/bin/cmake', '/home/robotpi/ws_lidar/src/ros2_mpu6050_driver', '-DAMENT_CMAKE_SYMLINK_INSTALL=1', '-DCMAKE_INSTALL_PREFIX=/home/robotpi/ws_lidar/install/mpu6050driver'], 'cwd': '/home/robotpi/ws_lidar/build/mpu6050driver', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'robotpi', 'SSH_CLIENT': 'fe80::3d0b:c4ea:a353:c7aa%wlan0 55613 22', 'XDG_SESSION_TYPE': 'tty', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/robotpi', 'OLDPWD': '/home/robotpi/ws_lidar/src', 'SSH_TTY': '/dev/pts/4', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'COLCON_PREFIX_PATH': '/home/robotpi/ws_lidar/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'robotpi', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '5', 'PATH': '/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'XDG_RUNTIME_DIR': '/run/user/1000', 'LANG': 'en_US.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'AMENT_PREFIX_PATH': '/home/robotpi/ws_lidar/install/sllidar_ros2:/home/robotpi/ws_lidar/install/rplidar_ros:/home/robotpi/ws_lidar/install/mpu6050driver:/home/robotpi/ws_lidar/install/imu_lidar_sensor_fusion:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/home/robotpi/ws_lidar/build/mpu6050driver', 'LC_ALL': 'en_US.UTF-8', 'SSH_CONNECTION': 'fe80::3d0b:c4ea:a353:c7aa%wlan0 55613 fe80::10ad:544d:72d7:3d12%wlan0 22', 'XDG_DATA_DIRS': '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/robotpi/ws_lidar/build/imu_lidar_sensor_fusion:/home/robotpi/ws_lidar/install/imu_lidar_sensor_fusion/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/home/robotpi/ws_lidar/install/sllidar_ros2:/home/robotpi/ws_lidar/install/rplidar_ros:/home/robotpi/ws_lidar/install/mpu6050driver:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/robotpi/ws_lidar/install/imu_lidar_sensor_fusion:/opt/ros/jazzy'}), 'shell': False}
+[0.804315] (-) TimerEvent: {}
+[0.817767] (rplidar_ros) JobProgress: {'identifier': 'rplidar_ros', 'progress': 'cmake'}
+[0.825954] (rplidar_ros) Command: {'cmd': ['/usr/bin/cmake', '/home/robotpi/ws_lidar/src/rplidar_ros', '-DAMENT_CMAKE_SYMLINK_INSTALL=1', '-DCMAKE_INSTALL_PREFIX=/home/robotpi/ws_lidar/install/rplidar_ros'], 'cwd': '/home/robotpi/ws_lidar/build/rplidar_ros', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'robotpi', 'SSH_CLIENT': 'fe80::3d0b:c4ea:a353:c7aa%wlan0 55613 22', 'XDG_SESSION_TYPE': 'tty', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/robotpi', 'OLDPWD': '/home/robotpi/ws_lidar/src', 'SSH_TTY': '/dev/pts/4', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'COLCON_PREFIX_PATH': '/home/robotpi/ws_lidar/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'robotpi', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '5', 'PATH': '/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'XDG_RUNTIME_DIR': '/run/user/1000', 'LANG': 'en_US.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'AMENT_PREFIX_PATH': '/home/robotpi/ws_lidar/install/sllidar_ros2:/home/robotpi/ws_lidar/install/rplidar_ros:/home/robotpi/ws_lidar/install/mpu6050driver:/home/robotpi/ws_lidar/install/imu_lidar_sensor_fusion:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/home/robotpi/ws_lidar/build/rplidar_ros', 'LC_ALL': 'en_US.UTF-8', 'SSH_CONNECTION': 'fe80::3d0b:c4ea:a353:c7aa%wlan0 55613 fe80::10ad:544d:72d7:3d12%wlan0 22', 'XDG_DATA_DIRS': '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/robotpi/ws_lidar/build/imu_lidar_sensor_fusion:/home/robotpi/ws_lidar/install/imu_lidar_sensor_fusion/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/home/robotpi/ws_lidar/install/sllidar_ros2:/home/robotpi/ws_lidar/install/rplidar_ros:/home/robotpi/ws_lidar/install/mpu6050driver:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/robotpi/ws_lidar/install/imu_lidar_sensor_fusion:/opt/ros/jazzy'}), 'shell': False}
+[0.905525] (-) TimerEvent: {}
+[0.925276] (mpu6050driver) StdoutLine: {'line': b'-- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)\n'}
+[0.926432] (rplidar_ros) StdoutLine: {'line': b'-- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)\n'}
+[1.005685] (-) TimerEvent: {}
+[1.111356] (-) TimerEvent: {}
+[1.212493] (-) TimerEvent: {}
+[1.319790] (-) TimerEvent: {}
+[1.421370] (-) TimerEvent: {}
+[1.522892] (-) TimerEvent: {}
+[1.625961] (-) TimerEvent: {}
+[1.728018] (-) TimerEvent: {}
+[1.831696] (-) TimerEvent: {}
+[1.934997] (-) TimerEvent: {}
+[2.037261] (-) TimerEvent: {}
+[2.138459] (-) TimerEvent: {}
+[2.242754] (-) TimerEvent: {}
+[2.307406] (rplidar_ros) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[2.342967] (-) TimerEvent: {}
+[2.379304] (mpu6050driver) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[2.444950] (-) TimerEvent: {}
+[2.448679] (rplidar_ros) StdoutLine: {'line': b'-- Found rclcpp: 28.1.11 (/opt/ros/jazzy/share/rclcpp/cmake)\n'}
+[2.452028] (mpu6050driver) StdoutLine: {'line': b'-- Found rclcpp: 28.1.11 (/opt/ros/jazzy/share/rclcpp/cmake)\n'}
+[2.547742] (-) TimerEvent: {}
+[2.648371] (-) TimerEvent: {}
+[2.661182] (mpu6050driver) StdoutLine: {'line': b'-- Found rosidl_generator_c: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)\n'}
+[2.665114] (rplidar_ros) StdoutLine: {'line': b'-- Found rosidl_generator_c: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)\n'}
+[2.708444] (mpu6050driver) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)\n'}
+[2.714151] (rplidar_ros) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)\n'}
+[2.748542] (-) TimerEvent: {}
+[2.769026] (rplidar_ros) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[2.772345] (mpu6050driver) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[2.833763] (mpu6050driver) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[2.835460] (rplidar_ros) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[2.848729] (-) TimerEvent: {}
+[2.949395] (-) TimerEvent: {}
+[3.054709] (-) TimerEvent: {}
+[3.145731] (mpu6050driver) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 7.3.2 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)\n'}
+[3.146422] (rplidar_ros) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 7.3.2 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)\n'}
+[3.154899] (-) TimerEvent: {}
+[3.155830] (rplidar_ros) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 8.4.3 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)\n'}
+[3.159906] (mpu6050driver) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 8.4.3 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)\n'}
+[3.255859] (-) TimerEvent: {}
+[3.358760] (-) TimerEvent: {}
+[3.439904] (rplidar_ros) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[3.463278] (-) TimerEvent: {}
+[3.484928] (mpu6050driver) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[3.563722] (-) TimerEvent: {}
+[3.666026] (-) TimerEvent: {}
+[3.769848] (-) TimerEvent: {}
+[3.778233] (mpu6050driver) StdoutLine: {'line': b'-- Found sensor_msgs: 5.3.6 (/opt/ros/jazzy/share/sensor_msgs/cmake)\n'}
+[3.782730] (rplidar_ros) StdoutLine: {'line': b'-- Found sensor_msgs: 5.3.6 (/opt/ros/jazzy/share/sensor_msgs/cmake)\n'}
+[3.870557] (-) TimerEvent: {}
+[3.979546] (-) TimerEvent: {}
+[4.072200] (imu_lidar_sensor_fusion) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'develop', '--editable', '--build-directory', '/home/robotpi/ws_lidar/build/imu_lidar_sensor_fusion/build', '--no-deps', 'symlink_data', '--force'], 'cwd': '/home/robotpi/ws_lidar/build/imu_lidar_sensor_fusion', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'robotpi', 'SSH_CLIENT': 'fe80::3d0b:c4ea:a353:c7aa%wlan0 55613 22', 'XDG_SESSION_TYPE': 'tty', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/robotpi', 'OLDPWD': '/home/robotpi/ws_lidar/src', 'SSH_TTY': '/dev/pts/4', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'COLCON_PREFIX_PATH': '/home/robotpi/ws_lidar/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'robotpi', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '5', 'PATH': '/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'XDG_RUNTIME_DIR': '/run/user/1000', 'LANG': 'en_US.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'AMENT_PREFIX_PATH': '/home/robotpi/ws_lidar/install/sllidar_ros2:/home/robotpi/ws_lidar/install/rplidar_ros:/home/robotpi/ws_lidar/install/mpu6050driver:/home/robotpi/ws_lidar/install/imu_lidar_sensor_fusion:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/home/robotpi/ws_lidar/build/imu_lidar_sensor_fusion', 'LC_ALL': 'en_US.UTF-8', 'SSH_CONNECTION': 'fe80::3d0b:c4ea:a353:c7aa%wlan0 55613 fe80::10ad:544d:72d7:3d12%wlan0 22', 'XDG_DATA_DIRS': '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/robotpi/ws_lidar/build/imu_lidar_sensor_fusion/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/robotpi/ws_lidar/install/imu_lidar_sensor_fusion/lib/python3.12/site-packages:/home/robotpi/ws_lidar/build/imu_lidar_sensor_fusion:/home/robotpi/ws_lidar/install/imu_lidar_sensor_fusion/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/home/robotpi/ws_lidar/install/sllidar_ros2:/home/robotpi/ws_lidar/install/rplidar_ros:/home/robotpi/ws_lidar/install/mpu6050driver:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor'}, 'shell': False}
+[4.086432] (-) TimerEvent: {}
+[4.187250] (-) TimerEvent: {}
+[4.234141] (rplidar_ros) StdoutLine: {'line': b'-- Found std_srvs: 5.3.6 (/opt/ros/jazzy/share/std_srvs/cmake)\n'}
+[4.287415] (-) TimerEvent: {}
+[4.388666] (-) TimerEvent: {}
+[4.495914] (-) TimerEvent: {}
+[4.597064] (-) TimerEvent: {}
+[4.697662] (-) TimerEvent: {}
+[4.777518] (mpu6050driver) StdoutLine: {'line': b'-- Configuring done (3.9s)\n'}
+[4.798383] (-) TimerEvent: {}
+[4.899419] (mpu6050driver) StdoutLine: {'line': b'-- Generating done (0.1s)\n'}
+[4.899865] (-) TimerEvent: {}
+[4.938745] (mpu6050driver) StdoutLine: {'line': b'-- Build files have been written to: /home/robotpi/ws_lidar/build/mpu6050driver\n'}
+[5.000046] (-) TimerEvent: {}
+[5.021431] (rplidar_ros) StdoutLine: {'line': b'-- Configuring done (4.1s)\n'}
+[5.033592] (mpu6050driver) CommandEnded: {'returncode': 0}
+[5.038004] (mpu6050driver) JobProgress: {'identifier': 'mpu6050driver', 'progress': 'build'}
+[5.038050] (mpu6050driver) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/robotpi/ws_lidar/build/mpu6050driver', '--', '-j4', '-l4'], 'cwd': '/home/robotpi/ws_lidar/build/mpu6050driver', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'robotpi', 'SSH_CLIENT': 'fe80::3d0b:c4ea:a353:c7aa%wlan0 55613 22', 'XDG_SESSION_TYPE': 'tty', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/robotpi', 'OLDPWD': '/home/robotpi/ws_lidar/src', 'SSH_TTY': '/dev/pts/4', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'COLCON_PREFIX_PATH': '/home/robotpi/ws_lidar/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'robotpi', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '5', 'PATH': '/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'XDG_RUNTIME_DIR': '/run/user/1000', 'LANG': 'en_US.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'AMENT_PREFIX_PATH': '/home/robotpi/ws_lidar/install/sllidar_ros2:/home/robotpi/ws_lidar/install/rplidar_ros:/home/robotpi/ws_lidar/install/mpu6050driver:/home/robotpi/ws_lidar/install/imu_lidar_sensor_fusion:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/home/robotpi/ws_lidar/build/mpu6050driver', 'LC_ALL': 'en_US.UTF-8', 'SSH_CONNECTION': 'fe80::3d0b:c4ea:a353:c7aa%wlan0 55613 fe80::10ad:544d:72d7:3d12%wlan0 22', 'XDG_DATA_DIRS': '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/robotpi/ws_lidar/build/imu_lidar_sensor_fusion:/home/robotpi/ws_lidar/install/imu_lidar_sensor_fusion/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/home/robotpi/ws_lidar/install/sllidar_ros2:/home/robotpi/ws_lidar/install/rplidar_ros:/home/robotpi/ws_lidar/install/mpu6050driver:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/robotpi/ws_lidar/install/imu_lidar_sensor_fusion:/opt/ros/jazzy'}), 'shell': False}
+[5.102833] (-) TimerEvent: {}
+[5.204748] (-) TimerEvent: {}
+[5.299436] (rplidar_ros) StdoutLine: {'line': b'-- Generating done (0.2s)\n'}
+[5.307334] (-) TimerEvent: {}
+[5.340737] (mpu6050driver) StdoutLine: {'line': b'[ 33%] \x1b[32m\x1b[1mLinking CXX executable mpu6050driver\x1b[0m\n'}
+[5.361912] (rplidar_ros) StdoutLine: {'line': b'-- Build files have been written to: /home/robotpi/ws_lidar/build/rplidar_ros\n'}
+[5.407433] (-) TimerEvent: {}
+[5.419381] (rplidar_ros) CommandEnded: {'returncode': 0}
+[5.422315] (rplidar_ros) JobProgress: {'identifier': 'rplidar_ros', 'progress': 'build'}
+[5.424266] (rplidar_ros) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/robotpi/ws_lidar/build/rplidar_ros', '--', '-j4', '-l4'], 'cwd': '/home/robotpi/ws_lidar/build/rplidar_ros', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'robotpi', 'SSH_CLIENT': 'fe80::3d0b:c4ea:a353:c7aa%wlan0 55613 22', 'XDG_SESSION_TYPE': 'tty', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/robotpi', 'OLDPWD': '/home/robotpi/ws_lidar/src', 'SSH_TTY': '/dev/pts/4', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'COLCON_PREFIX_PATH': '/home/robotpi/ws_lidar/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'robotpi', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '5', 'PATH': '/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'XDG_RUNTIME_DIR': '/run/user/1000', 'LANG': 'en_US.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'AMENT_PREFIX_PATH': '/home/robotpi/ws_lidar/install/sllidar_ros2:/home/robotpi/ws_lidar/install/rplidar_ros:/home/robotpi/ws_lidar/install/mpu6050driver:/home/robotpi/ws_lidar/install/imu_lidar_sensor_fusion:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/home/robotpi/ws_lidar/build/rplidar_ros', 'LC_ALL': 'en_US.UTF-8', 'SSH_CONNECTION': 'fe80::3d0b:c4ea:a353:c7aa%wlan0 55613 fe80::10ad:544d:72d7:3d12%wlan0 22', 'XDG_DATA_DIRS': '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/robotpi/ws_lidar/build/imu_lidar_sensor_fusion:/home/robotpi/ws_lidar/install/imu_lidar_sensor_fusion/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/home/robotpi/ws_lidar/install/sllidar_ros2:/home/robotpi/ws_lidar/install/rplidar_ros:/home/robotpi/ws_lidar/install/mpu6050driver:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/robotpi/ws_lidar/install/imu_lidar_sensor_fusion:/opt/ros/jazzy'}), 'shell': False}
+[5.507542] (-) TimerEvent: {}
+[5.610472] (-) TimerEvent: {}
+[5.711299] (-) TimerEvent: {}
+[5.814031] (-) TimerEvent: {}
+[5.864730] (rplidar_ros) StdoutLine: {'line': b'[  2%] \x1b[32m\x1b[1mLinking CXX executable rplidar_node\x1b[0m\n'}
+[5.914177] (-) TimerEvent: {}
+[5.998930] (imu_lidar_sensor_fusion) StdoutLine: {'line': b'running develop\n'}
+[6.014370] (-) TimerEvent: {}
+[6.115206] (-) TimerEvent: {}
+[6.216296] (-) TimerEvent: {}
+[6.318987] (-) TimerEvent: {}
+[6.419588] (-) TimerEvent: {}
+[6.520118] (-) TimerEvent: {}
+[6.620751] (-) TimerEvent: {}
+[6.723558] (-) TimerEvent: {}
+[6.826812] (-) TimerEvent: {}
+[6.928948] (-) TimerEvent: {}
+[7.033977] (-) TimerEvent: {}
+[7.137800] (-) TimerEvent: {}
+[7.238564] (-) TimerEvent: {}
+[7.341879] (-) TimerEvent: {}
+[7.442698] (-) TimerEvent: {}
+[7.544194] (-) TimerEvent: {}
+[7.627451] (mpu6050driver) StdoutLine: {'line': b'[100%] Built target mpu6050driver\n'}
+[7.644354] (-) TimerEvent: {}
+[7.713715] (mpu6050driver) CommandEnded: {'returncode': 0}
+[7.714185] (mpu6050driver) JobProgress: {'identifier': 'mpu6050driver', 'progress': 'install'}
+[7.744460] (-) TimerEvent: {}
+[7.770711] (mpu6050driver) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/robotpi/ws_lidar/build/mpu6050driver'], 'cwd': '/home/robotpi/ws_lidar/build/mpu6050driver', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'robotpi', 'SSH_CLIENT': 'fe80::3d0b:c4ea:a353:c7aa%wlan0 55613 22', 'XDG_SESSION_TYPE': 'tty', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/robotpi', 'OLDPWD': '/home/robotpi/ws_lidar/src', 'SSH_TTY': '/dev/pts/4', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'COLCON_PREFIX_PATH': '/home/robotpi/ws_lidar/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'robotpi', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '5', 'PATH': '/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'XDG_RUNTIME_DIR': '/run/user/1000', 'LANG': 'en_US.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'AMENT_PREFIX_PATH': '/home/robotpi/ws_lidar/install/sllidar_ros2:/home/robotpi/ws_lidar/install/rplidar_ros:/home/robotpi/ws_lidar/install/mpu6050driver:/home/robotpi/ws_lidar/install/imu_lidar_sensor_fusion:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/home/robotpi/ws_lidar/build/mpu6050driver', 'LC_ALL': 'en_US.UTF-8', 'SSH_CONNECTION': 'fe80::3d0b:c4ea:a353:c7aa%wlan0 55613 fe80::10ad:544d:72d7:3d12%wlan0 22', 'XDG_DATA_DIRS': '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/robotpi/ws_lidar/build/imu_lidar_sensor_fusion:/home/robotpi/ws_lidar/install/imu_lidar_sensor_fusion/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/home/robotpi/ws_lidar/install/sllidar_ros2:/home/robotpi/ws_lidar/install/rplidar_ros:/home/robotpi/ws_lidar/install/mpu6050driver:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/robotpi/ws_lidar/install/imu_lidar_sensor_fusion:/opt/ros/jazzy'}), 'shell': False}
+[7.820915] (mpu6050driver) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[7.826839] (mpu6050driver) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[7.827376] (mpu6050driver) StdoutLine: {'line': b'-- Symlinking: /home/robotpi/ws_lidar/install/mpu6050driver/lib/mpu6050driver/mpu6050driver\n'}
+[7.832724] (imu_lidar_sensor_fusion) StdoutLine: {'line': b'running egg_info\n'}
+[7.847297] (-) TimerEvent: {}
+[7.876261] (mpu6050driver) StdoutLine: {'line': b'-- Symlinking: /home/robotpi/ws_lidar/install/mpu6050driver/share/mpu6050driver//launch/mpu6050driver_launch.py\n'}
+[7.918976] (mpu6050driver) StdoutLine: {'line': b'-- Symlinking: /home/robotpi/ws_lidar/install/mpu6050driver/share/mpu6050driver//params/mpu6050.yaml\n'}
+[7.947455] (-) TimerEvent: {}
+[7.962895] (mpu6050driver) StdoutLine: {'line': b'-- Symlinking: /home/robotpi/ws_lidar/install/mpu6050driver/share/ament_index/resource_index/package_run_dependencies/mpu6050driver\n'}
+[8.001841] (mpu6050driver) StdoutLine: {'line': b'-- Symlinking: /home/robotpi/ws_lidar/install/mpu6050driver/share/ament_index/resource_index/parent_prefix_path/mpu6050driver\n'}
+[8.047748] (-) TimerEvent: {}
+[8.070310] (imu_lidar_sensor_fusion) StdoutLine: {'line': b'writing imu_lidar_sensor_fusion.egg-info/PKG-INFO\n'}
+[8.070817] (imu_lidar_sensor_fusion) StdoutLine: {'line': b'writing dependency_links to imu_lidar_sensor_fusion.egg-info/dependency_links.txt\n'}
+[8.077755] (imu_lidar_sensor_fusion) StdoutLine: {'line': b'writing entry points to imu_lidar_sensor_fusion.egg-info/entry_points.txt\n'}
+[8.078093] (imu_lidar_sensor_fusion) StdoutLine: {'line': b'writing requirements to imu_lidar_sensor_fusion.egg-info/requires.txt\n'}
+[8.079841] (imu_lidar_sensor_fusion) StdoutLine: {'line': b'writing top-level names to imu_lidar_sensor_fusion.egg-info/top_level.txt\n'}
+[8.091304] (mpu6050driver) StdoutLine: {'line': b'-- Symlinking: /home/robotpi/ws_lidar/install/mpu6050driver/share/mpu6050driver/environment/ament_prefix_path.sh\n'}
+[8.133507] (mpu6050driver) StdoutLine: {'line': b'-- Symlinking: /home/robotpi/ws_lidar/install/mpu6050driver/share/mpu6050driver/environment/ament_prefix_path.dsv\n'}
+[8.148346] (-) TimerEvent: {}
+[8.166793] (mpu6050driver) StdoutLine: {'line': b'-- Symlinking: /home/robotpi/ws_lidar/install/mpu6050driver/share/mpu6050driver/environment/path.sh\n'}
+[8.213045] (mpu6050driver) StdoutLine: {'line': b'-- Symlinking: /home/robotpi/ws_lidar/install/mpu6050driver/share/mpu6050driver/environment/path.dsv\n'}
+[8.248953] (-) TimerEvent: {}
+[8.273805] (mpu6050driver) StdoutLine: {'line': b'-- Symlinking: /home/robotpi/ws_lidar/install/mpu6050driver/share/mpu6050driver/local_setup.bash\n'}
+[8.314371] (mpu6050driver) StdoutLine: {'line': b'-- Symlinking: /home/robotpi/ws_lidar/install/mpu6050driver/share/mpu6050driver/local_setup.sh\n'}
+[8.349158] (-) TimerEvent: {}
+[8.353032] (mpu6050driver) StdoutLine: {'line': b'-- Symlinking: /home/robotpi/ws_lidar/install/mpu6050driver/share/mpu6050driver/local_setup.zsh\n'}
+[8.396946] (mpu6050driver) StdoutLine: {'line': b'-- Symlinking: /home/robotpi/ws_lidar/install/mpu6050driver/share/mpu6050driver/local_setup.dsv\n'}
+[8.428258] (rplidar_ros) StdoutLine: {'line': b'[ 47%] Built target rplidar_node\n'}
+[8.449550] (imu_lidar_sensor_fusion) StdoutLine: {'line': b"reading manifest file 'imu_lidar_sensor_fusion.egg-info/SOURCES.txt'\n"}
+[8.450094] (-) TimerEvent: {}
+[8.455828] (imu_lidar_sensor_fusion) StdoutLine: {'line': b"writing manifest file 'imu_lidar_sensor_fusion.egg-info/SOURCES.txt'\n"}
+[8.492254] (mpu6050driver) StdoutLine: {'line': b'-- Symlinking: /home/robotpi/ws_lidar/install/mpu6050driver/share/mpu6050driver/package.dsv\n'}
+[8.551744] (-) TimerEvent: {}
+[8.576710] (mpu6050driver) StdoutLine: {'line': b'-- Symlinking: /home/robotpi/ws_lidar/install/mpu6050driver/share/ament_index/resource_index/packages/mpu6050driver\n'}
+[8.587844] (rplidar_ros) StdoutLine: {'line': b'[ 50%] \x1b[32m\x1b[1mLinking CXX executable rplidar_client\x1b[0m\n'}
+[8.613024] (imu_lidar_sensor_fusion) StdoutLine: {'line': b'running build_ext\n'}
+[8.614150] (imu_lidar_sensor_fusion) StdoutLine: {'line': b'Creating /home/robotpi/ws_lidar/install/imu_lidar_sensor_fusion/lib/python3.12/site-packages/imu-lidar-sensor-fusion.egg-link (link to .)\n'}
+[8.617849] (imu_lidar_sensor_fusion) StdoutLine: {'line': b'Installing fusion_calculation_node script to /home/robotpi/ws_lidar/install/imu_lidar_sensor_fusion/lib/imu_lidar_sensor_fusion\n'}
+[8.620085] (mpu6050driver) StdoutLine: {'line': b'-- Symlinking: /home/robotpi/ws_lidar/install/mpu6050driver/share/mpu6050driver/cmake/mpu6050driverConfig.cmake\n'}
+[8.625222] (imu_lidar_sensor_fusion) StdoutLine: {'line': b'\n'}
+[8.626584] (imu_lidar_sensor_fusion) StdoutLine: {'line': b'Installed /home/robotpi/ws_lidar/build/imu_lidar_sensor_fusion\n'}
+[8.626853] (imu_lidar_sensor_fusion) StdoutLine: {'line': b'running symlink_data\n'}
+[8.629082] (imu_lidar_sensor_fusion) StdoutLine: {'line': b'symbolically linking /home/robotpi/ws_lidar/build/imu_lidar_sensor_fusion/resource/imu_lidar_sensor_fusion -> /home/robotpi/ws_lidar/install/imu_lidar_sensor_fusion/share/ament_index/resource_index/packages\n'}
+[8.629450] (imu_lidar_sensor_fusion) StdoutLine: {'line': b'symbolically linking /home/robotpi/ws_lidar/build/imu_lidar_sensor_fusion/package.xml -> /home/robotpi/ws_lidar/install/imu_lidar_sensor_fusion/share/imu_lidar_sensor_fusion\n'}
+[8.632045] (imu_lidar_sensor_fusion) StdoutLine: {'line': b'symbolically linking /home/robotpi/ws_lidar/build/imu_lidar_sensor_fusion/launch/__init__.py -> /home/robotpi/ws_lidar/install/imu_lidar_sensor_fusion/share/imu_lidar_sensor_fusion/launch\n'}
+[8.632501] (imu_lidar_sensor_fusion) StdoutLine: {'line': b'symbolically linking /home/robotpi/ws_lidar/build/imu_lidar_sensor_fusion/launch/fusion_launch.py -> /home/robotpi/ws_lidar/install/imu_lidar_sensor_fusion/share/imu_lidar_sensor_fusion/launch\n'}
+[8.651861] (-) TimerEvent: {}
+[8.717394] (mpu6050driver) StdoutLine: {'line': b'-- Symlinking: /home/robotpi/ws_lidar/install/mpu6050driver/share/mpu6050driver/cmake/mpu6050driverConfig-version.cmake\n'}
+[8.758287] (-) TimerEvent: {}
+[8.781070] (mpu6050driver) StdoutLine: {'line': b'-- Symlinking: /home/robotpi/ws_lidar/install/mpu6050driver/share/mpu6050driver/package.xml\n'}
+[8.859771] (-) TimerEvent: {}
+[8.894808] (mpu6050driver) CommandEnded: {'returncode': 0}
+[8.961789] (-) TimerEvent: {}
+[9.074586] (-) TimerEvent: {}
+[9.109772] (mpu6050driver) JobEnded: {'identifier': 'mpu6050driver', 'rc': 0}
+[9.120807] (imu_lidar_sensor_fusion) CommandEnded: {'returncode': 0}
+[9.177232] (-) TimerEvent: {}
+[9.197131] (imu_lidar_sensor_fusion) JobEnded: {'identifier': 'imu_lidar_sensor_fusion', 'rc': 0}
+[9.277478] (-) TimerEvent: {}
+[9.379803] (-) TimerEvent: {}
+[9.480417] (-) TimerEvent: {}
+[9.581233] (-) TimerEvent: {}
+[9.683182] (-) TimerEvent: {}
+[9.785031] (-) TimerEvent: {}
+[9.885683] (-) TimerEvent: {}
+[9.987183] (-) TimerEvent: {}
+[10.088027] (-) TimerEvent: {}
+[10.190467] (-) TimerEvent: {}
+[10.290977] (-) TimerEvent: {}
+[10.293550] (rplidar_ros) StdoutLine: {'line': b'[ 52%] Built target rplidar_client\n'}
+[10.392742] (-) TimerEvent: {}
+[10.431678] (rplidar_ros) StdoutLine: {'line': b'[ 55%] \x1b[32m\x1b[1mLinking CXX executable rplidar_composition\x1b[0m\n'}
+[10.492907] (-) TimerEvent: {}
+[10.595557] (-) TimerEvent: {}
+[10.696483] (-) TimerEvent: {}
+[10.797456] (-) TimerEvent: {}
+[10.900549] (-) TimerEvent: {}
+[11.001570] (-) TimerEvent: {}
+[11.111258] (-) TimerEvent: {}
+[11.212379] (-) TimerEvent: {}
+[11.312934] (-) TimerEvent: {}
+[11.415335] (-) TimerEvent: {}
+[11.502077] (rplidar_ros) StdoutLine: {'line': b'[100%] Built target rplidar_composition\n'}
+[11.515497] (-) TimerEvent: {}
+[11.551743] (rplidar_ros) CommandEnded: {'returncode': 0}
+[11.554003] (rplidar_ros) JobProgress: {'identifier': 'rplidar_ros', 'progress': 'install'}
+[11.554089] (rplidar_ros) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/robotpi/ws_lidar/build/rplidar_ros'], 'cwd': '/home/robotpi/ws_lidar/build/rplidar_ros', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'robotpi', 'SSH_CLIENT': 'fe80::3d0b:c4ea:a353:c7aa%wlan0 55613 22', 'XDG_SESSION_TYPE': 'tty', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/robotpi', 'OLDPWD': '/home/robotpi/ws_lidar/src', 'SSH_TTY': '/dev/pts/4', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'COLCON_PREFIX_PATH': '/home/robotpi/ws_lidar/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'robotpi', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '5', 'PATH': '/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'XDG_RUNTIME_DIR': '/run/user/1000', 'LANG': 'en_US.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'AMENT_PREFIX_PATH': '/home/robotpi/ws_lidar/install/sllidar_ros2:/home/robotpi/ws_lidar/install/rplidar_ros:/home/robotpi/ws_lidar/install/mpu6050driver:/home/robotpi/ws_lidar/install/imu_lidar_sensor_fusion:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/home/robotpi/ws_lidar/build/rplidar_ros', 'LC_ALL': 'en_US.UTF-8', 'SSH_CONNECTION': 'fe80::3d0b:c4ea:a353:c7aa%wlan0 55613 fe80::10ad:544d:72d7:3d12%wlan0 22', 'XDG_DATA_DIRS': '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/robotpi/ws_lidar/build/imu_lidar_sensor_fusion:/home/robotpi/ws_lidar/install/imu_lidar_sensor_fusion/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/home/robotpi/ws_lidar/install/sllidar_ros2:/home/robotpi/ws_lidar/install/rplidar_ros:/home/robotpi/ws_lidar/install/mpu6050driver:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/robotpi/ws_lidar/install/imu_lidar_sensor_fusion:/opt/ros/jazzy'}), 'shell': False}
+[11.583756] (rplidar_ros) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[11.585731] (rplidar_ros) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[11.586001] (rplidar_ros) StdoutLine: {'line': b'-- Symlinking: /home/robotpi/ws_lidar/install/rplidar_ros/share/rplidar_ros/launch/rplidar_a1_launch.py\n'}
+[11.615621] (rplidar_ros) StdoutLine: {'line': b'-- Symlinking: /home/robotpi/ws_lidar/install/rplidar_ros/share/rplidar_ros/launch/rplidar_a2m12_launch.py\n'}
+[11.616022] (-) TimerEvent: {}
+[11.641710] (rplidar_ros) StdoutLine: {'line': b'-- Symlinking: /home/robotpi/ws_lidar/install/rplidar_ros/share/rplidar_ros/launch/rplidar_a2m7_launch.py\n'}
+[11.666890] (rplidar_ros) StdoutLine: {'line': b'-- Symlinking: /home/robotpi/ws_lidar/install/rplidar_ros/share/rplidar_ros/launch/rplidar_a2m8_launch.py\n'}
+[11.691906] (rplidar_ros) StdoutLine: {'line': b'-- Symlinking: /home/robotpi/ws_lidar/install/rplidar_ros/share/rplidar_ros/launch/rplidar_a3_launch.py\n'}
+[11.717247] (rplidar_ros) StdoutLine: {'line': b'-- Symlinking: /home/robotpi/ws_lidar/install/rplidar_ros/share/rplidar_ros/launch/rplidar_c1_launch.py\n'}
+[11.717498] (-) TimerEvent: {}
+[11.742722] (rplidar_ros) StdoutLine: {'line': b'-- Symlinking: /home/robotpi/ws_lidar/install/rplidar_ros/share/rplidar_ros/launch/rplidar_s1_launch.py\n'}
+[11.770375] (rplidar_ros) StdoutLine: {'line': b'-- Symlinking: /home/robotpi/ws_lidar/install/rplidar_ros/share/rplidar_ros/launch/rplidar_s1_tcp_launch.py\n'}
+[11.794625] (rplidar_ros) StdoutLine: {'line': b'-- Symlinking: /home/robotpi/ws_lidar/install/rplidar_ros/share/rplidar_ros/launch/rplidar_s2_launch.py\n'}
+[11.817772] (-) TimerEvent: {}
+[11.823782] (rplidar_ros) StdoutLine: {'line': b'-- Symlinking: /home/robotpi/ws_lidar/install/rplidar_ros/share/rplidar_ros/launch/rplidar_s2e_launch.py\n'}
+[11.848798] (rplidar_ros) StdoutLine: {'line': b'-- Symlinking: /home/robotpi/ws_lidar/install/rplidar_ros/share/rplidar_ros/launch/rplidar_s3_launch.py\n'}
+[11.876913] (rplidar_ros) StdoutLine: {'line': b'-- Symlinking: /home/robotpi/ws_lidar/install/rplidar_ros/share/rplidar_ros/launch/rplidar_t1_launch.py\n'}
+[11.902551] (rplidar_ros) StdoutLine: {'line': b'-- Symlinking: /home/robotpi/ws_lidar/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_a1_launch.py\n'}
+[11.918904] (-) TimerEvent: {}
+[11.931722] (rplidar_ros) StdoutLine: {'line': b'-- Symlinking: /home/robotpi/ws_lidar/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_a2m12_launch.py\n'}
+[11.958600] (rplidar_ros) StdoutLine: {'line': b'-- Symlinking: /home/robotpi/ws_lidar/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_a2m7_launch.py\n'}
+[11.989379] (rplidar_ros) StdoutLine: {'line': b'-- Symlinking: /home/robotpi/ws_lidar/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_a2m8_launch.py\n'}
+[12.015200] (rplidar_ros) StdoutLine: {'line': b'-- Symlinking: /home/robotpi/ws_lidar/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_a3_launch.py\n'}
+[12.019789] (-) TimerEvent: {}
+[12.044712] (rplidar_ros) StdoutLine: {'line': b'-- Symlinking: /home/robotpi/ws_lidar/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_c1_launch.py\n'}
+[12.084052] (rplidar_ros) StdoutLine: {'line': b'-- Symlinking: /home/robotpi/ws_lidar/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_s1_launch.py\n'}
+[12.121021] (-) TimerEvent: {}
+[12.122739] (rplidar_ros) StdoutLine: {'line': b'-- Symlinking: /home/robotpi/ws_lidar/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_s1_tcp_launch.py\n'}
+[12.153882] (rplidar_ros) StdoutLine: {'line': b'-- Symlinking: /home/robotpi/ws_lidar/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_s2_launch.py\n'}
+[12.182231] (rplidar_ros) StdoutLine: {'line': b'-- Symlinking: /home/robotpi/ws_lidar/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_s2e_launch.py\n'}
+[12.207942] (rplidar_ros) StdoutLine: {'line': b'-- Symlinking: /home/robotpi/ws_lidar/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_s3_launch.py\n'}
+[12.221918] (-) TimerEvent: {}
+[12.237540] (rplidar_ros) StdoutLine: {'line': b'-- Symlinking: /home/robotpi/ws_lidar/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_t1_launch.py\n'}
+[12.262168] (rplidar_ros) StdoutLine: {'line': b'-- Symlinking: /home/robotpi/ws_lidar/install/rplidar_ros/share/rplidar_ros/rviz/rplidar_ros.rviz\n'}
+[12.290866] (rplidar_ros) StdoutLine: {'line': b'-- Symlinking: /home/robotpi/ws_lidar/install/rplidar_ros/lib/rplidar_ros/rplidar_node\n'}
+[12.321692] (-) TimerEvent: {}
+[12.323049] (rplidar_ros) StdoutLine: {'line': b'-- Symlinking: /home/robotpi/ws_lidar/install/rplidar_ros/lib/rplidar_ros/rplidar_composition\n'}
+[12.354448] (rplidar_ros) StdoutLine: {'line': b'-- Symlinking: /home/robotpi/ws_lidar/install/rplidar_ros/lib/rplidar_ros/rplidar_client\n'}
+[12.385691] (rplidar_ros) StdoutLine: {'line': b'-- Symlinking: /home/robotpi/ws_lidar/install/rplidar_ros/share/ament_index/resource_index/package_run_dependencies/rplidar_ros\n'}
+[12.413103] (rplidar_ros) StdoutLine: {'line': b'-- Symlinking: /home/robotpi/ws_lidar/install/rplidar_ros/share/ament_index/resource_index/parent_prefix_path/rplidar_ros\n'}
+[12.421825] (-) TimerEvent: {}
+[12.445448] (rplidar_ros) StdoutLine: {'line': b'-- Symlinking: /home/robotpi/ws_lidar/install/rplidar_ros/share/rplidar_ros/environment/ament_prefix_path.sh\n'}
+[12.482919] (rplidar_ros) StdoutLine: {'line': b'-- Symlinking: /home/robotpi/ws_lidar/install/rplidar_ros/share/rplidar_ros/environment/ament_prefix_path.dsv\n'}
+[12.516707] (rplidar_ros) StdoutLine: {'line': b'-- Symlinking: /home/robotpi/ws_lidar/install/rplidar_ros/share/rplidar_ros/environment/path.sh\n'}
+[12.521990] (-) TimerEvent: {}
+[12.545356] (rplidar_ros) StdoutLine: {'line': b'-- Symlinking: /home/robotpi/ws_lidar/install/rplidar_ros/share/rplidar_ros/environment/path.dsv\n'}
+[12.572723] (rplidar_ros) StdoutLine: {'line': b'-- Symlinking: /home/robotpi/ws_lidar/install/rplidar_ros/share/rplidar_ros/local_setup.bash\n'}
+[12.600673] (rplidar_ros) StdoutLine: {'line': b'-- Symlinking: /home/robotpi/ws_lidar/install/rplidar_ros/share/rplidar_ros/local_setup.sh\n'}
+[12.622141] (-) TimerEvent: {}
+[12.630159] (rplidar_ros) StdoutLine: {'line': b'-- Symlinking: /home/robotpi/ws_lidar/install/rplidar_ros/share/rplidar_ros/local_setup.zsh\n'}
+[12.653282] (rplidar_ros) StdoutLine: {'line': b'-- Symlinking: /home/robotpi/ws_lidar/install/rplidar_ros/share/rplidar_ros/local_setup.dsv\n'}
+[12.681201] (rplidar_ros) StdoutLine: {'line': b'-- Symlinking: /home/robotpi/ws_lidar/install/rplidar_ros/share/rplidar_ros/package.dsv\n'}
+[12.708602] (rplidar_ros) StdoutLine: {'line': b'-- Symlinking: /home/robotpi/ws_lidar/install/rplidar_ros/share/ament_index/resource_index/packages/rplidar_ros\n'}
+[12.722310] (-) TimerEvent: {}
+[12.738326] (rplidar_ros) StdoutLine: {'line': b'-- Symlinking: /home/robotpi/ws_lidar/install/rplidar_ros/share/rplidar_ros/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[12.764044] (rplidar_ros) StdoutLine: {'line': b'-- Symlinking: /home/robotpi/ws_lidar/install/rplidar_ros/share/rplidar_ros/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[12.791046] (rplidar_ros) StdoutLine: {'line': b'-- Symlinking: /home/robotpi/ws_lidar/install/rplidar_ros/share/rplidar_ros/cmake/rplidar_rosConfig.cmake\n'}
+[12.817468] (rplidar_ros) StdoutLine: {'line': b'-- Symlinking: /home/robotpi/ws_lidar/install/rplidar_ros/share/rplidar_ros/cmake/rplidar_rosConfig-version.cmake\n'}
+[12.822443] (-) TimerEvent: {}
+[12.845404] (rplidar_ros) StdoutLine: {'line': b'-- Symlinking: /home/robotpi/ws_lidar/install/rplidar_ros/share/rplidar_ros/package.xml\n'}
+[12.877584] (rplidar_ros) CommandEnded: {'returncode': 0}
+[12.922520] (-) TimerEvent: {}
+[12.923690] (rplidar_ros) JobEnded: {'identifier': 'rplidar_ros', 'rc': 0}
+[12.926094] (-) EventReactorShutdown: {}

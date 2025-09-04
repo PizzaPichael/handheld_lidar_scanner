@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: imu-lidar-sensor-fusion
+Version: 0.0.0
+Summary: Fusion of Lidar and IMU data
+Maintainer: robotpi
+Maintainer-email: robotpi@example.com
+License: Apache License 2.0

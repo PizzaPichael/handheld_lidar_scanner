@@ -1,0 +1,24 @@
+[3.379s] Invoking command in '/home/robotpi/ws_lidar/src/imu_lidar_sensor_fusion': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/robotpi/ws_lidar/build/imu_lidar_sensor_fusion/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/robotpi/ws_lidar/install/imu_lidar_sensor_fusion/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/imu_lidar_sensor_fusion build --build-base /home/robotpi/ws_lidar/build/imu_lidar_sensor_fusion/build install --record /home/robotpi/ws_lidar/build/imu_lidar_sensor_fusion/install.log --single-version-externally-managed install_data
+[3.920s] running egg_info
+[3.955s] writing ../../build/imu_lidar_sensor_fusion/imu_lidar_sensor_fusion.egg-info/PKG-INFO
+[3.956s] writing dependency_links to ../../build/imu_lidar_sensor_fusion/imu_lidar_sensor_fusion.egg-info/dependency_links.txt
+[3.963s] writing entry points to ../../build/imu_lidar_sensor_fusion/imu_lidar_sensor_fusion.egg-info/entry_points.txt
+[3.963s] writing requirements to ../../build/imu_lidar_sensor_fusion/imu_lidar_sensor_fusion.egg-info/requires.txt
+[3.964s] writing top-level names to ../../build/imu_lidar_sensor_fusion/imu_lidar_sensor_fusion.egg-info/top_level.txt
+[4.043s] reading manifest file '../../build/imu_lidar_sensor_fusion/imu_lidar_sensor_fusion.egg-info/SOURCES.txt'
+[4.050s] writing manifest file '../../build/imu_lidar_sensor_fusion/imu_lidar_sensor_fusion.egg-info/SOURCES.txt'
+[4.052s] running build
+[4.052s] running build_py
+[4.052s] copying imu_lidar_sensor_fusion/fusion_calculation_node.py -> /home/robotpi/ws_lidar/build/imu_lidar_sensor_fusion/build/lib/imu_lidar_sensor_fusion
+[4.053s] running install
+[4.069s] running install_lib
+[4.107s] copying /home/robotpi/ws_lidar/build/imu_lidar_sensor_fusion/build/lib/imu_lidar_sensor_fusion/fusion_calculation_node.py -> /home/robotpi/ws_lidar/install/imu_lidar_sensor_fusion/lib/python3.12/site-packages/imu_lidar_sensor_fusion
+[4.108s] byte-compiling /home/robotpi/ws_lidar/install/imu_lidar_sensor_fusion/lib/python3.12/site-packages/imu_lidar_sensor_fusion/fusion_calculation_node.py to fusion_calculation_node.cpython-312.pyc
+[4.115s] running install_data
+[4.115s] running install_egg_info
+[4.154s] removing '/home/robotpi/ws_lidar/install/imu_lidar_sensor_fusion/lib/python3.12/site-packages/imu_lidar_sensor_fusion-0.0.0-py3.12.egg-info' (and everything under it)
+[4.154s] Copying ../../build/imu_lidar_sensor_fusion/imu_lidar_sensor_fusion.egg-info to /home/robotpi/ws_lidar/install/imu_lidar_sensor_fusion/lib/python3.12/site-packages/imu_lidar_sensor_fusion-0.0.0-py3.12.egg-info
+[4.162s] running install_scripts
+[4.474s] Installing fusion_calculation_node script to /home/robotpi/ws_lidar/install/imu_lidar_sensor_fusion/lib/imu_lidar_sensor_fusion
+[4.475s] writing list of installed files to '/home/robotpi/ws_lidar/build/imu_lidar_sensor_fusion/install.log'
+[4.647s] Invoked command in '/home/robotpi/ws_lidar/src/imu_lidar_sensor_fusion' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/robotpi/ws_lidar/build/imu_lidar_sensor_fusion/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/robotpi/ws_lidar/install/imu_lidar_sensor_fusion/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/imu_lidar_sensor_fusion build --build-base /home/robotpi/ws_lidar/build/imu_lidar_sensor_fusion/build install --record /home/robotpi/ws_lidar/build/imu_lidar_sensor_fusion/install.log --single-version-externally-managed install_data

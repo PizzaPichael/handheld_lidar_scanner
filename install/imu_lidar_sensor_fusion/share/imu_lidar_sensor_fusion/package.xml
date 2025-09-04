@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>imu_lidar_sensor_fusion</name>
+  <version>0.0.0</version>
+  <description>Fusion of Lidar and IMU sensor data</description>
+
+  <maintainer email="robotpi@example.com">robotpi</maintainer>
+  <license>Apache License 2.0</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  <buildtool_depend>ament_python</buildtool_depend>
+
+  <depend>rclpy</depend>
+  <depend>sensor_msgs</depend>
+  <depend>std_msgs</depend>
+
+  <exec_depend>launch</exec_depend>
+  <exec_depend>launch_ros</exec_depend>
+
+  <test_depend>ament_lint_auto</test_depend>
+  <test_depend>ament_lint_common</test_depend>
+
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>
