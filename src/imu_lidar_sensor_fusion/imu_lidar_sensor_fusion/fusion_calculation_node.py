@@ -224,18 +224,6 @@ class FusionNode(Node):
         self.slam_position[1] = msg.pose.position.y
         self.slam_position[2] = msg.pose.position.z
 
-    def laser_to_points(scan_msg):
-        points = []
-        angle = scan_msg.angle_min
-        for r in scan_msg.ranges:
-            if scan_msg.range_min < r < scan_msg.range_max:
-                x = r * math.cos(angle)
-                y = r * math.sin(angle)
-                z = 0.0
-                points.append((x, y, z))
-            angle += scan_msg.angle_increment
-        return points
-
     def transform_points(points, quat, translation):
         transformed = []
         qx, qy, qz, qw = quat
