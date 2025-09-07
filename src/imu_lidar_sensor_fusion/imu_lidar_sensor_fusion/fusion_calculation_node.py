@@ -120,44 +120,6 @@ class FusionNode(Node):
         qw = cr * cp * cy + sr * sp * sy
         return qx, qy, qz, qw
 
-    def _update_translation(self, msg: Imu, quat, dt):
-        #----Translation---
-        ax, ay, az = msg.linear_acceleration.x, msg.linear_acceleration.y, msg.linear_acceleration.z
-        # Bias korrigieren (falls du Bias geschätzt hast)
-        ax -= self.acc_bias[0]
-        ay -= self.acc_bias[1]
-        az -= self.acc_bias[2]
-
-        # Beschleunigungsvektor im Body-frame
-        acc_body = (ax, ay, az)
-
-        # In Weltframe rotieren
-        qx, qy, qz, qw = quat
-        acc_world = self.rotate_vector_by_quaternion(acc_body, qx, qy, qz, qw)
-
-        # Gravitation abziehen (angenommen +Z zeigt "up" im Weltframe)
-        ax_w, ay_w, az_w = acc_world
-        az_w -= self.gravity
-
-        # Rauschunterdrückung / Dämpfung kleiner Werte
-        if abs(ax_w) < self.acc_threshold: ax_w = 0.0
-        if abs(ay_w) < self.acc_threshold: ay_w = 0.0
-        if abs(az_w) < self.acc_threshold: az_w = 0.0
-
-        # Integration (velocity und position)
-        self.velocity[0] += ax_w * dt
-        self.velocity[1] += ay_w * dt
-        self.velocity[2] += az_w * dt
-
-        self.position[0] += self.velocity[0] * dt
-        self.position[1] += self.velocity[1] * dt
-        self.position[2] += self.velocity[2] * dt
-
-        # Optional: sehr einfache Geschwindigkeitsdrift-Dämpfung (kleine Werte auf 0 setzen)
-        vel_thresh = 0.001
-        for i in range(3):
-            if abs(self.velocity[i]) < vel_thresh:
-                self.velocity[i] = 0.0
 
     def _publish_imu_fused(self, msg: Imu, quat):
         qx, qy, qz, qw = quat
@@ -240,7 +202,6 @@ class FusionNode(Node):
     def imu_callback(self, msg: Imu):
         dt = self._compute_dt()
         quaternion = self._update_orientation(msg, dt)
-        #self._update_translation(msg, quaternion, dt)
         self._publish_imu_fused(msg, quaternion)
         self._publish_imu_pose(quaternion)        
         self._publish_transformation(quaternion)
