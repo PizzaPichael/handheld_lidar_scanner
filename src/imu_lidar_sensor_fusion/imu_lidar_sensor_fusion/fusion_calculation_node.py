@@ -8,6 +8,11 @@ from geometry_msgs.msg import PoseStamped, TransformStamped
 from visualization_msgs.msg import Marker
 from tf2_ros import TransformBroadcaster, StaticTransformBroadcaster
 
+from sensor_msgs.msg import PointCloud2
+from sensor_msgs.msg import PointField
+import sensor_msgs_py.point_cloud2 as pc2
+import std_msgs.msg
+
 class FusionNode(Node):
     def __init__(self):
         super().__init__('fusion_calculation_node')
@@ -16,11 +21,13 @@ class FusionNode(Node):
         self.subscription = self.create_subscription(Imu, '/imu', self.imu_callback, 10)
         self.lidar_subscription = self.create_subscription(LaserScan, '/scan', self.lidar_callback, 10)
         self.slam_pose_sub = self.create_subscription(PoseStamped, '/slam_toolbox/pose', self.slam_pose_callback, 10)
+        self.mag_subscription = self.create_subscription(MagneticField, '/mag', self.mag_callback, 10)
 
         # Publisher für RViz
         self.imu_fused_pub = self.create_publisher(Imu, '/imu_fused', 10)
         self.imu_marker_pub = self.create_publisher(Marker, '/imu_marker', 10)
         self.imu_pose_pub = self.create_publisher(PoseStamped, '/imu_pose', 10)
+        self.pointcloud_pub = self.create_publisher(PointCloud2, '/pointcloud', 10)
 
         self.tf_broadcaster = TransformBroadcaster(self)
         self.static_broadcaster = StaticTransformBroadcaster(self)
@@ -39,6 +46,9 @@ class FusionNode(Node):
         self.acc_threshold = 0.02  # m/s^2; Messerärmung unter diesem Wert wird als 0 behandelt
         
         self.slam_position = [0.0, 0.0, 0.0]
+
+        # Für Pointcloud
+        self.last_quaternion = (0.0, 0.0, 0.0, 1.0)
 
     def rotate_vector_by_quaternion(self, v, qx, qy, qz, qw):
         # v: (x,y,z)
@@ -87,9 +97,14 @@ class FusionNode(Node):
         roll_acc = math.atan2(ay, az)
         pitch_acc = math.atan2(-ax, math.sqrt(ay**2 + az**2))
 
+        # Magnetometer
+        mx, my, mz = self.mag_field
+        yaw_mag = math.atan2(my, mx)
+
         # Complementary Filter
         self.roll = self.alpha * self.roll + (1 - self.alpha) * roll_acc
         self.pitch = self.alpha * self.pitch + (1 - self.alpha) * pitch_acc
+        self.yaw = self.alpha * self.yaw + (1 - self.alpha) * yaw_mag
 
         # Quaternion
         cy = math.cos(self.yaw/2)
@@ -174,34 +189,6 @@ class FusionNode(Node):
         pose_msg.pose.orientation.w = qw
         self.imu_pose_pub.publish(pose_msg)
 
-    def _publish_imu_marker(self, quat):
-        qx, qy, qz, qw = quat
-        marker = Marker()
-        marker.header.stamp = self.get_clock().now().to_msg()
-        marker.header.frame_id = "odom"
-        marker.type = Marker.CUBE
-        marker.action = Marker.ADD
-        
-        marker.scale.x = 0.1 # Länge der X-Achse
-        marker.scale.y = 0.1  # Länge der Y-Achse
-        marker.scale.z = 0.1  # Länge der Z-Achse
-        
-        # Marker color
-        marker.color.a = 1.0
-        marker.color.r = 0.0
-        marker.color.g = 1.0
-        marker.color.b = 0.0
-        # Orientierung des Pfeils setzen
-        marker.pose.orientation.x = qx
-        marker.pose.orientation.y = qy
-        marker.pose.orientation.z = qz
-        marker.pose.orientation.w = qw
-        # Marker Position setzen (ersetze oder ergänze dein marker.pose)
-        marker.pose.position.x = self.slam_position[0]
-        marker.pose.position.y = self.slam_position[1]
-        marker.pose.position.z = self.slam_position[2]
-        self.imu_marker_pub.publish(marker)
-
     def _publish_transformation(self, quat):
         qx, qy, qz, qw = quat
         t = TransformStamped()
@@ -261,6 +248,18 @@ class FusionNode(Node):
             transformed.append((xg, yg, zg))
         return transformed
 
+    def _publish_pointcloud(self, transformed_points):
+        # Header erstellen
+        header = std_msgs.msg.Header()
+        header.stamp = self.get_clock().now().to_msg()
+        header.frame_id = "odom"
+
+        # PointCloud2-Nachricht aus XYZ-Liste erstellen
+        cloud_msg = pc2.create_cloud_xyz32(header, transformed_points)
+
+        # Nachricht veröffentlichen
+        self.pointcloud_pub.publish(cloud_msg)
+
 
     def imu_callback(self, msg: Imu):
         dt = self._compute_dt()
@@ -270,6 +269,8 @@ class FusionNode(Node):
         self._publish_imu_pose(quaternion)        
         self._publish_imu_marker(quaternion)
         self._publish_transformation(quaternion)
+
+        self.last_quaternion = quaternion # Für Pointcloud
         
         # Logging
         qx, qy, qz, qw = quaternion
@@ -277,8 +278,31 @@ class FusionNode(Node):
             f"Quaternion: x={qx:.3f}, y={qy:.3f}, z={qz:.3f}, w={qw:.3f}"
         )
 
+    def mag_callback(self, msg: MagneticField):
+        self.mag_field = (
+            msg.magnetic_field.x,
+            msg.magnetic_field.y,
+            msg.magnetic_field.z
+        )
+
     def lidar_callback(self, msg: LaserScan):
-        msg.header.frame_id = "laser"
+        angle = msg.angle_min
+        points = []
+        for r in msg.ranges:
+            if msg.range_min < r < msg.range_max:
+                x = r * math.cos(angle)
+                y = r * math.sin(angle)
+                z = 0.0
+                points.append((x, y, z))
+            angle += msg.angle_increment
+
+        # Punkte mit Quaternion (aktueller IMU) transformieren
+        qx, qy, qz, qw = self.last_quaternion  # Erklärung unten
+        transformed_points = [self.rotate_vector_by_quaternion(p, qx, qy, qz, qw) for p in points]
+
+        # PointCloud veröffentlichen
+        self._publish_pointcloud(transformed_points)
+
         self.get_logger().info(
             f"Lidar - min={msg.range_min:.2f}, max={msg.range_max:.2f}, ranges[0]={msg.ranges[0]:.2f}"
         )
