@@ -50,6 +50,8 @@ class FusionNode(Node):
         # Für Pointcloud
         self.last_quaternion = (0.0, 0.0, 0.0, 1.0)
 
+        self.pointcloud = []
+
     def rotate_vector_by_quaternion(self, v, qx, qy, qz, qw):
         # v: (x,y,z)
         # q = (qx,qy,qz,qw)
@@ -198,6 +200,22 @@ class FusionNode(Node):
         # Nachricht veröffentlichen
         self.pointcloud_pub.publish(cloud_msg)
 
+    def _transform_laser_to_points(self, msg):
+        angle = msg.angle_min
+        points = []
+        for r in msg.ranges:
+            if msg.range_min < r < msg.range_max:
+                x = r * math.cos(angle)
+                y = r * math.sin(angle)
+                z = 0.0
+                points.append((x, y, z))
+            angle += msg.angle_increment
+
+        # Punkte mit aktuellem Quaternion transformieren
+        qx, qy, qz, qw = self.last_quaternion
+        transformed_points = [self.rotate_vector_by_quaternion(p, qx, qy, qz, qw) for p in points]
+        return transformed_points
+
 
     def imu_callback(self, msg: Imu):
         dt = self._compute_dt()
@@ -206,9 +224,8 @@ class FusionNode(Node):
         self._publish_imu_pose(quaternion)        
         self._publish_transformation(quaternion)
 
-        self.last_quaternion = quaternion # Für Pointcloud
+        self.last_quaternion = quaternion # Update für Pointcloud
         
-        # Logging
         qx, qy, qz, qw = quaternion
         self.get_logger().info(
             f"Quaternion: x={qx:.3f}, y={qy:.3f}, z={qz:.3f}, w={qw:.3f}"
@@ -222,21 +239,7 @@ class FusionNode(Node):
         )"""
 
     def lidar_callback(self, msg: LaserScan):
-        angle = msg.angle_min
-        points = []
-        for r in msg.ranges:
-            if msg.range_min < r < msg.range_max:
-                x = r * math.cos(angle)
-                y = r * math.sin(angle)
-                z = 0.0
-                points.append((x, y, z))
-            angle += msg.angle_increment
-
-        # Punkte mit Quaternion (aktueller IMU) transformieren
-        qx, qy, qz, qw = self.last_quaternion  # Erklärung unten
-        transformed_points = [self.rotate_vector_by_quaternion(p, qx, qy, qz, qw) for p in points]
-
-        # PointCloud veröffentlichen
+        transformed_points = _transform_laser_to_points(LaserScan)
         self._publish_pointcloud(transformed_points)
 
         self.get_logger().info(
