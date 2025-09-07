@@ -18,9 +18,9 @@ def generate_launch_description():
 
     # --- IMU Launch-Datei ---
     imu_launch_file = os.path.join(
-        get_package_share_directory('mpu9250driver'),
+        get_package_share_directory('mpu6050driver'),
         'launch',
-        'mpu9250driver_launch.py'
+        'mpu6050driver_launch.py'
     )
 
     # --- RViz Config (optional anpassen) ---
