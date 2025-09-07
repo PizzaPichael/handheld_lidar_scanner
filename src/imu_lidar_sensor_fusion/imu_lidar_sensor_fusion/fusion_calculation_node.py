@@ -224,18 +224,6 @@ class FusionNode(Node):
         self.slam_position[1] = msg.pose.position.y
         self.slam_position[2] = msg.pose.position.z
 
-    def transform_points(points, quat, translation):
-        transformed = []
-        qx, qy, qz, qw = quat
-        tx, ty, tz = translation
-        for x, y, z in points:
-            xg, yg, zg = rotate_vector_by_quaternion((x, y, z), qx, qy, qz, qw)
-            xg += tx
-            yg += ty
-            zg += tz
-            transformed.append((xg, yg, zg))
-        return transformed
-
     def _publish_pointcloud(self, transformed_points):
         # Header erstellen
         header = std_msgs.msg.Header()
