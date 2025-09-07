@@ -50,7 +50,7 @@ class FusionNode(Node):
         # Für Pointcloud
         self.last_quaternion = (0.0, 0.0, 0.0, 1.0)
 
-        self.pointcloud = []
+        self.pointcloud_array = []
 
     def rotate_vector_by_quaternion(self, v, qx, qy, qz, qw):
         # v: (x,y,z)
@@ -216,6 +216,9 @@ class FusionNode(Node):
         transformed_points = [self.rotate_vector_by_quaternion(p, qx, qy, qz, qw) for p in points]
         return transformed_points
 
+    def _save_points_in_pointcloud(self, transformed_points):
+        self.pointcloud_array.extend(transformed_points)
+
 
     def imu_callback(self, msg: Imu):
         dt = self._compute_dt()
@@ -239,8 +242,9 @@ class FusionNode(Node):
         )"""
 
     def lidar_callback(self, msg: LaserScan):
-        transformed_points = _transform_laser_to_points(LaserScan)
-        self._publish_pointcloud(transformed_points)
+        transformed_points = self._transform_laser_to_points(msg)
+        self._save_points_in_pointcloud(transformed_points)
+        self._publish_pointcloud(self.pointcloud_array)
 
         self.get_logger().info(
             f"Lidar - min={msg.range_min:.2f}, max={msg.range_max:.2f}, ranges[0]={msg.ranges[0]:.2f}"
