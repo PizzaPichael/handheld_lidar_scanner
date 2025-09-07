@@ -21,7 +21,7 @@ class FusionNode(Node):
         self.subscription = self.create_subscription(Imu, '/imu', self.imu_callback, 10)
         self.lidar_subscription = self.create_subscription(LaserScan, '/scan', self.lidar_callback, 10)
         self.slam_pose_sub = self.create_subscription(PoseStamped, '/slam_toolbox/pose', self.slam_pose_callback, 10)
-        self.mag_subscription = self.create_subscription(MagneticField, '/mag', self.mag_callback, 10)
+        # self.mag_subscription = self.create_subscription(MagneticField, '/mag', self.mag_callback, 10)
 
         # Publisher für RViz
         self.imu_fused_pub = self.create_publisher(Imu, '/imu_fused', 10)
@@ -98,13 +98,13 @@ class FusionNode(Node):
         pitch_acc = math.atan2(-ax, math.sqrt(ay**2 + az**2))
 
         # Magnetometer
-        mx, my, mz = self.mag_field
-        yaw_mag = math.atan2(my, mx)
+        # mx, my, mz = self.mag_field
+        # yaw_mag = math.atan2(my, mx)
 
         # Complementary Filter
         self.roll = self.alpha * self.roll + (1 - self.alpha) * roll_acc
         self.pitch = self.alpha * self.pitch + (1 - self.alpha) * pitch_acc
-        self.yaw = self.alpha * self.yaw + (1 - self.alpha) * yaw_mag
+        # self.yaw = self.alpha * self.yaw + (1 - self.alpha) * yaw_mag
 
         # Quaternion
         cy = math.cos(self.yaw/2)
@@ -267,7 +267,6 @@ class FusionNode(Node):
         #self._update_translation(msg, quaternion, dt)
         self._publish_imu_fused(msg, quaternion)
         self._publish_imu_pose(quaternion)        
-        self._publish_imu_marker(quaternion)
         self._publish_transformation(quaternion)
 
         self.last_quaternion = quaternion # Für Pointcloud
@@ -278,12 +277,12 @@ class FusionNode(Node):
             f"Quaternion: x={qx:.3f}, y={qy:.3f}, z={qz:.3f}, w={qw:.3f}"
         )
 
-    def mag_callback(self, msg: MagneticField):
+    """def mag_callback(self, msg: MagneticField):
         self.mag_field = (
             msg.magnetic_field.x,
             msg.magnetic_field.y,
             msg.magnetic_field.z
-        )
+        )"""
 
     def lidar_callback(self, msg: LaserScan):
         angle = msg.angle_min
