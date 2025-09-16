@@ -7,6 +7,10 @@ from launch.actions import DeclareLaunchArgument, IncludeLaunchDescription
 from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch.substitutions import LaunchConfiguration
 from launch_ros.actions import Node
+from launch.conditions import IfCondition
+from launch.actions import DeclareLaunchArgument
+from launch.substitutions import LaunchConfiguration
+
 
 def generate_launch_description():
     # --- Lidar Launch-Datei ---
@@ -23,10 +27,17 @@ def generate_launch_description():
         'mpu6050driver_launch.py'
     )
 
+    # Launch-Argument für RViz
+    declare_rviz_arg = DeclareLaunchArgument(
+        'use_rviz',
+        default_value='false',
+        description='Starte RViz wenn true'
+    )
+
     # --- RViz Config (optional anpassen) ---
     rviz_config = os.path.join(
         get_package_share_directory('imu_lidar_sensor_fusion'),
-        'rviz',
+        'rviz2',
         'fusion_config.rviz'
     )
 
@@ -65,12 +76,15 @@ def generate_launch_description():
             parameters=[slam_config]
         ),
 
+        declare_rviz_arg,
+
         # RViz
         Node(
             package='rviz2',
             executable='rviz2',
             name='rviz2',
             arguments=['-d', rviz_config],
-            output='screen'
+            output='screen',
+            condition=IfCondition(LaunchConfiguration('use_rviz'))
         )
     ])

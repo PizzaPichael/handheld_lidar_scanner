@@ -237,10 +237,10 @@ class FusionNode(Node):
 
         self.last_quaternion = quaternion # Update für Pointcloud
         
-        qx, qy, qz, qw = quaternion
+        """qx, qy, qz, qw = quaternion
         self.get_logger().info(
             f"Quaternion: x={qx:.3f}, y={qy:.3f}, z={qz:.3f}, w={qw:.3f}"
-        )
+        )"""
 
     """def mag_callback(self, msg: MagneticField):
         self.mag_field = (
@@ -254,9 +254,9 @@ class FusionNode(Node):
         self._save_points_in_pointcloud(transformed_points)
         self._publish_pointcloud(self.pointcloud_array)
 
-        self.get_logger().info(
+        """self.get_logger().info(
             f"Lidar - min={msg.range_min:.2f}, max={msg.range_max:.2f}, ranges[0]={msg.ranges[0]:.2f}"
-        )
+        )"""
 
 def main(args=None):
     rclpy.init(args=args)
