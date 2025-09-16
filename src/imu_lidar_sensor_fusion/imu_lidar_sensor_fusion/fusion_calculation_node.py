@@ -200,6 +200,14 @@ class FusionNode(Node):
         # Nachricht veröffentlichen
         self.pointcloud_pub.publish(cloud_msg)
 
+    def _restrict_laser_scan_by_angle(self, msg,  angle=None ):
+        if angle:
+            angle_min = msg.angle_min
+            angle_max = msg.angle_max
+            angle_inc = msg.angle_increment
+
+            
+
     def _transform_laser_to_points(self, msg):
         angle = msg.angle_min
         points = []
