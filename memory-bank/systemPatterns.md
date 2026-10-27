@@ -5,7 +5,7 @@
 ```
 RPLidar C1 ──/scan──────────┬──────────────► slam_toolbox ──/map, TF map→odom
                             │                     │
-                            ▼                     │ /slam_toolbox/pose (wrong topic, see progress.md)
+                            ▼                     │ /pose (PoseWithCovarianceStamped, frame map)
 MPU6050 ──/imu──► fusion_calculation_node ◄───────┘
                      ├── /imu_fused   (Imu with orientation)
                      ├── /imu_pose    (PoseStamped)

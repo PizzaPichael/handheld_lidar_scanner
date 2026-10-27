@@ -98,7 +98,7 @@ Leave out `use_rviz:=true` when running over SSH without a display.
 ```
 RPLidar C1 ──/scan──────────┬──────────────► slam_toolbox ──/map, TF map→odom
                             │                     │
-                            ▼                     │ /slam_toolbox/pose*
+                            ▼                     │ /pose
 MPU6050 ──/imu──► fusion_calculation_node ◄───────┘
                      │
                      ├── /imu_fused    (Imu, with orientation)
@@ -114,7 +114,7 @@ MPU6050 ──/imu──► fusion_calculation_node ◄───────┘
 - The point cloud is voxel-downsampled: space is divided into cubes of edge length `voxel_size` (parameter, default `0.05` m) and only the first point per cube is kept. The cloud grows with the scanned area, not with scan time. Change it in `launch/fusion_launch.py` (`parameters=[{'voxel_size': 0.05}]` on the fusion node, then rebuild) or, when running the node on its own, with `--ros-args -p voxel_size:=0.03`. Check the active value with `ros2 param get /fusion_node voxel_size`.
 - Broadcasts `odom → base_link` using the IMU orientation and the position from slam_toolbox.
 
-\* The node subscribes to `/slam_toolbox/pose` as `PoseStamped`. Check with `ros2 topic list` which pose topic your slam_toolbox version actually publishes.
+slam_toolbox publishes `/pose` (`PoseWithCovarianceStamped`, frame `map`) only after it has successfully processed a scan. Until then the position stays at the origin.
 
 **TF tree**
 

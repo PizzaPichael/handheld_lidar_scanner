@@ -3,7 +3,7 @@ import rclpy
 
 from rclpy.node import Node
 from sensor_msgs.msg import Imu, LaserScan, PointCloud2
-from geometry_msgs.msg import PoseStamped
+from geometry_msgs.msg import PoseStamped, PoseWithCovarianceStamped
 from tf2_ros import TransformBroadcaster, StaticTransformBroadcaster
 
 from .orientation_filter import ComplementaryFilter
@@ -27,7 +27,8 @@ class FusionNode(Node):
         # Subscriber
         self.create_subscription(Imu, '/imu', self.imu_callback, 10)
         self.create_subscription(LaserScan, '/scan', self.lidar_callback, 10)
-        self.create_subscription(PoseStamped, '/slam_toolbox/pose', self.slam_pose_callback, 10)
+        # slam_toolbox publiziert seine Pose (Frame map) erst nach erfolgreich verarbeitetem Scan
+        self.create_subscription(PoseWithCovarianceStamped, '/pose', self.slam_pose_callback, 10)
 
         # Publisher für RViz
         self.imu_fused_pub = self.create_publisher(Imu, '/imu_fused', 10)
@@ -75,8 +76,8 @@ class FusionNode(Node):
         self.point_cloud.add(scan_to_points(msg, self.orientation, self.slam_position))
         self.pointcloud_pub.publish(make_pointcloud_msg(self._now(), WORLD_FRAME, self.point_cloud.points))
 
-    def slam_pose_callback(self, msg: PoseStamped):
-        p = msg.pose.position
+    def slam_pose_callback(self, msg: PoseWithCovarianceStamped):
+        p = msg.pose.pose.position
         self.slam_position = (p.x, p.y, p.z)
 
 
