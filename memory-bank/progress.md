@@ -27,7 +27,8 @@ Observed, cause known or suspected, not fixed.
 
 | Problem | Fix | Commit |
 |---|---|---|
-| SLAM pose never arrived: node subscribed to `/slam_toolbox/pose` as `PoseStamped` | Subscribes to `/pose` as `PoseWithCovarianceStamped`, as published by slam_toolbox (`jazzy` branch, `slam_toolbox_common.cpp`, `setROSInterfaces()`; frame `map`, only after a successfully processed scan). Not yet run on the Pi | uncommitted |
+| VNC "connection refused" headless: `/etc/gdm3/custom.conf` on the Pi had lost `WaylandEnable=false`, so GNOME ran Wayland, no Xorg, `x11vnc-auto.sh` looped with "Kein Xorg gefunden" | Line re-added on the Pi, reboot. Verified 2026-10-27: session `Type=x11`, Xorg running, 5900 listening | none (Pi config, repo copy was already correct) |
+| SLAM pose never arrived: node subscribed to `/slam_toolbox/pose` as `PoseStamped` | Subscribes to `/pose` as `PoseWithCovarianceStamped`, as published by slam_toolbox (`jazzy` branch, `slam_toolbox_common.cpp`, `setROSInterfaces()`; frame `map`, only after a successfully processed scan). Not yet run on the Pi | `0646db4` |
 | Scan points only rotated, not translated by the device position | `scan_to_points(scan, orientation, position)` rotates, then adds the position; node passes `slam_position` | `4fd30a9` |
 | Pi froze: point cloud grew without limit and was fully republished every scan | Voxel grid, `voxel_size` param ([ADR 0002](../docs/adr/0002-voxel-grid-instead-of-keyframes.md)) | `c913b7f` |
 | Fusion node was one 288-line file | Split into modules ([ADR 0003](../docs/adr/0003-split-fusion-node-into-ros-free-modules.md)); unused `/imu_marker` publisher and dead attributes removed | `6e21694` |

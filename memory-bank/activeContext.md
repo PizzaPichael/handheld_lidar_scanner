@@ -16,6 +16,7 @@ Getting the whole pipeline running on the Pi again after a long break, with a po
 - Agent docs added: this memory bank, `docs/adr/`, `AGENTS.md`.
 - Scan points are now translated by the device position after rotation (tested off-device).
 - Slam pose subscription fixed: `/pose` as `PoseWithCovarianceStamped` (verified in slam_toolbox source, not yet on the Pi).
+- Headless VNC fixed on the Pi: `WaylandEnable=false` was missing from `/etc/gdm3/custom.conf` there (see `progress.md`).
 - Branch `raspi_remote` (one commit, `25f432e`) is **abandoned**; work continues on `main`. The Pi may still have it checked out.
 
 ## Next steps
