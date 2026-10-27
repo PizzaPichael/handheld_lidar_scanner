@@ -39,7 +39,8 @@ class FusionNode(Node):
         self._publish_static_lidar_tf()
 
         self.orientation_filter = ComplementaryFilter(alpha=0.9)
-        self.point_cloud = PointCloudAccumulator()
+        voxel_size = self.declare_parameter('voxel_size', 0.05).value  # Kantenlänge eines Voxels in m
+        self.point_cloud = PointCloudAccumulator(voxel_size)
 
         self.prev_time = None
         self.orientation = IDENTITY_ROTATION

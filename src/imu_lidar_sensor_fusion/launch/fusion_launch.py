@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+Wo#!/usr/bin/env python3
 
 import os
 from ament_index_python.packages import get_package_share_directory
@@ -64,7 +64,8 @@ def generate_launch_description():
             package='imu_lidar_sensor_fusion',
             executable='fusion_calculation_node',
             name='fusion_node',
-            output='screen'
+            output='screen',
+            parameters=[{'voxel_size': 0.05}]   # Kantenlänge eines Voxels in m
         ),
 
         # SLAM Toolbox Node

@@ -56,7 +56,7 @@ The repository root is the colcon workspace (on the Pi: `~/ws_lidar`).
 | `imu_lidar_sensor_fusion/fusion_calculation_node.py` | ROS node: subscribers, publishers, TF, wires the modules below together |
 | `imu_lidar_sensor_fusion/orientation_filter.py` | `ComplementaryFilter`: orientation from gyro and accelerometer |
 | `imu_lidar_sensor_fusion/scan_projection.py` | Converts a `LaserScan` into rotated 3D points |
-| `imu_lidar_sensor_fusion/point_cloud_accumulator.py` | Collects the points of all scans |
+| `imu_lidar_sensor_fusion/point_cloud_accumulator.py` | Collects the points of all scans with voxel grid downsampling |
 | `imu_lidar_sensor_fusion/geometry.py` | Quaternion math |
 | `imu_lidar_sensor_fusion/ros_messages.py` | Builds Imu, Pose, TF and PointCloud2 messages |
 | `launch/fusion_launch.py` | Starts drivers, fusion node, slam_toolbox and optionally RViz |
@@ -103,14 +103,15 @@ MPU6050 ──/imu──► fusion_calculation_node ◄───────┘
                      │
                      ├── /imu_fused    (Imu, with orientation)
                      ├── /imu_pose     (PoseStamped)
-                     ├── /pointcloud   (PointCloud2, accumulated)
+                     ├── /pointcloud   (PointCloud2, voxel-downsampled)
                      └── TF odom→base_link
 ```
 
 **fusion_calculation_node**
 
 - Estimates roll and pitch with a complementary filter (gyro integration corrected by the accelerometer, `alpha = 0.9`). Yaw comes from gyro integration only. The MPU6050 driver reports angular velocity in deg/s, the node converts it to rad/s.
-- Projects each scan into XY points, rotates them by the latest IMU orientation and appends them to a growing point cloud, which is published on every scan.
+- Projects each scan into XY points, rotates them by the latest IMU orientation and adds them to the point cloud, which is published on every scan.
+- The point cloud is voxel-downsampled: space is divided into cubes of edge length `voxel_size` (parameter, default `0.05` m) and only the first point per cube is kept. The cloud grows with the scanned area, not with scan time. Change it in `launch/fusion_launch.py` (`parameters=[{'voxel_size': 0.05}]` on the fusion node, then rebuild) or, when running the node on its own, with `--ros-args -p voxel_size:=0.03`. Check the active value with `ros2 param get /fusion_node voxel_size`.
 - Broadcasts `odom → base_link` using the IMU orientation and the position from slam_toolbox.
 
 \* The node subscribes to `/slam_toolbox/pose` as `PoseStamped`. Check with `ros2 topic list` which pose topic your slam_toolbox version actually publishes.
