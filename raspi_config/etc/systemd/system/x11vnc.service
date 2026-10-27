@@ -1,0 +1,13 @@
+[Unit]
+Description=x11 VNC Server
+After=graphical.target
+Requires=graphical.target
+
+[Service]
+Type_simple
+ExecStart=/usr/local/bin/x11vnc-auto.sh
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=graphical.target
