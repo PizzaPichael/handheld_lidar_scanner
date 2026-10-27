@@ -45,7 +45,7 @@ def generate_launch_description():
     slam_config = os.path.join(
         get_package_share_directory('imu_lidar_sensor_fusion'),
         'config',
-        'mapper_params_online_async.yaml'
+        'mapper_params_online.yaml'
     )
 
     return LaunchDescription([

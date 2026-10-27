@@ -213,12 +213,12 @@ class FusionNode(Node):
             restricted_angle_min = zero_angle_forward_along_x - input_rad_angle/2
             restricted_angle_max = zero_angle_forward_along_x + input_rad_angle/2
 
-            num_ranges = int(round((angle_max - angle_min) / angle_increment)) + 1
+            num_ranges = int(round((angle_max - angle_min) / angle_inc)) + 1
 
             angles_array = []
             current_angle = angle_min
-            for num_ranges:
-                angles_array.push(current_angle)
+            for _ in range(num_ranges):
+                angles_array.append(current_angle)
                 current_angle += angle_inc
 
 
