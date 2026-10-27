@@ -1,4 +1,4 @@
-Wo#!/usr/bin/env python3
+#!/usr/bin/env python3
 
 import os
 from ament_index_python.packages import get_package_share_directory

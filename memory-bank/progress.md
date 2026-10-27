@@ -27,6 +27,7 @@ Observed, cause known or suspected, not fixed.
 
 | Problem | Fix | Commit |
 |---|---|---|
+| Launch failed with `NameError: name 'Wo' is not defined`: stray `Wo` before the shebang in `fusion_launch.py`, introduced in `c913b7f` | Removed. All package `.py` files parse (`ast`), launch on the Pi not yet confirmed | uncommitted |
 | VNC "connection refused" headless: `/etc/gdm3/custom.conf` on the Pi had lost `WaylandEnable=false`, so GNOME ran Wayland, no Xorg, `x11vnc-auto.sh` looped with "Kein Xorg gefunden" | Line re-added on the Pi, reboot. Verified 2026-10-27: session `Type=x11`, Xorg running, 5900 listening | none (Pi config, repo copy was already correct) |
 | SLAM pose never arrived: node subscribed to `/slam_toolbox/pose` as `PoseStamped` | Subscribes to `/pose` as `PoseWithCovarianceStamped`, as published by slam_toolbox (`jazzy` branch, `slam_toolbox_common.cpp`, `setROSInterfaces()`; frame `map`, only after a successfully processed scan). Not yet run on the Pi | `0646db4` |
 | Scan points only rotated, not translated by the device position | `scan_to_points(scan, orientation, position)` rotates, then adds the position; node passes `slam_position` | `4fd30a9` |
