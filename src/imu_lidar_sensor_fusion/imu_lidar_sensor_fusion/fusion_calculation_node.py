@@ -39,6 +39,8 @@ class FusionNode(Node):
         self.yaw = 0.0
         self.alpha = 0.9 # Bias, wie sehr der Algorithmus den IMU Daten vertraut
 
+        self.i = 0
+
         self.velocity = [0.0, 0.0, 0.0]   # vx, vy, vz (m/s)
         self.position = [0.0, 0.0, 0.0]   # x, y, z (m)
         self.acc_bias = [0.0, 0.0, 0.0]   # optionale Bias-Initialisierung
@@ -217,15 +219,9 @@ class FusionNode(Node):
 
             angles_array = []
             current_angle = angle_min
-            for num_ranges:
+            for _ in range(num_ranges):
                 angles_array.push(current_angle)
                 current_angle += angle_inc
-
-
-
-
-
-            
 
     def _transform_laser_to_points(self, msg):
         angle = msg.angle_min
@@ -244,7 +240,9 @@ class FusionNode(Node):
         return transformed_points
 
     def _save_points_in_pointcloud(self, transformed_points):
-        self.pointcloud_array.extend(transformed_points)
+        self.i += 1
+        if self.i % 5 == 0:
+            self.pointcloud_array.extend(transformed_points)
 
 
     def imu_callback(self, msg: Imu):
@@ -256,10 +254,10 @@ class FusionNode(Node):
 
         self.last_quaternion = quaternion # Update für Pointcloud
         
-        """qx, qy, qz, qw = quaternion
+        qx, qy, qz, qw = quaternion
         self.get_logger().info(
             f"Quaternion: x={qx:.3f}, y={qy:.3f}, z={qz:.3f}, w={qw:.3f}"
-        )"""
+        )
 
     """def mag_callback(self, msg: MagneticField):
         self.mag_field = (

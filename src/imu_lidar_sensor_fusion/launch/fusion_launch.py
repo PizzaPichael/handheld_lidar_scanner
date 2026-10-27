@@ -21,6 +21,12 @@ def generate_launch_description():
     )
 
     # --- IMU Launch-Datei ---
+    """imu_launch_file = os.path.join(
+        get_package_share_directory('icm20948-ros2'),
+        'launch',
+        'icm20948.launch.py'
+    )"""
+
     imu_launch_file = os.path.join(
         get_package_share_directory('mpu6050driver'),
         'launch',
@@ -59,14 +65,6 @@ def generate_launch_description():
             PythonLaunchDescriptionSource(imu_launch_file)
         ),
 
-        # Fusion Node (mein Python-Skript)
-        Node(
-            package='imu_lidar_sensor_fusion',
-            executable='fusion_calculation_node',
-            name='fusion_node',
-            output='screen'
-        ),
-
         # SLAM Toolbox Node
         Node(
             package='slam_toolbox',
@@ -78,6 +76,13 @@ def generate_launch_description():
 
         declare_rviz_arg,
 
+        Node(
+            package='imu_lidar_sensor_fusion',
+            executable='fusion_calculation_node',
+            name='fusion_calculation_node',
+            output='screen'
+        ),
+        
         # RViz
         Node(
             package='rviz2',
