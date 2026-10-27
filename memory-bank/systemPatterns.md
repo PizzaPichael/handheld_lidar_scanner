@@ -5,7 +5,7 @@
 ```
 RPLidar C1 ──/scan──────────┬──────────────► slam_toolbox ──/map, TF map→odom
                             │                     │
-                            ▼                     │ /slam_toolbox/pose (unverified, see progress.md)
+                            ▼                     │ /slam_toolbox/pose (wrong topic, see progress.md)
 MPU6050 ──/imu──► fusion_calculation_node ◄───────┘
                      ├── /imu_fused   (Imu with orientation)
                      ├── /imu_pose    (PoseStamped)
@@ -31,7 +31,7 @@ Known flaw: slam_toolbox consumes `odom → base_link`, and the fusion node buil
 |---|---|---|
 | `fusion_calculation_node.py` | ROS wiring only: subscriptions, publishers, TF, callbacks | no |
 | `orientation_filter.py` | `ComplementaryFilter.update(gyro_deg_s, accel, dt)` → quaternion | yes |
-| `scan_projection.py` | `scan_to_points(scan, orientation)`; WIP `restrict_scan_by_angle` (unused) | yes |
+| `scan_projection.py` | `scan_to_points(scan, orientation, position)`; WIP `restrict_scan_by_angle` (unused) | yes |
 | `point_cloud_accumulator.py` | `PointCloudAccumulator(voxel_size)`: one point per voxel | yes |
 | `geometry.py` | quaternion multiply, rotate vector, euler → quaternion | yes |
 | `ros_messages.py` | builds Imu, Pose, TF, PointCloud2 messages | no |
@@ -41,7 +41,7 @@ Quaternions are tuples `(x, y, z, w)` throughout. Decision: [ADR 0003](../docs/a
 ## Key algorithms
 
 - **Orientation:** complementary filter, `alpha = 0.9`. Roll/pitch = gyro integration corrected by accelerometer tilt. Yaw = gyro integration only (MPU6050 has no magnetometer), so yaw drifts. `dt` comes from wall-clock time between IMU callbacks (0.01 s for the first message).
-- **Scan projection:** polar → XY in the laser plane (z = 0), drop ranges outside `(range_min, range_max)`, rotate by the latest IMU orientation. No translation.
+- **Scan projection:** polar → XY in the laser plane (z = 0), drop ranges outside `(range_min, range_max)`, rotate by the latest IMU orientation, then translate by `slam_position` (the same translation the node puts into `odom → base_link`).
 - **Downsampling:** voxel grid, key = `floor(coord / voxel_size)` per axis, first point per voxel wins. Decision: [ADR 0002](../docs/adr/0002-voxel-grid-instead-of-keyframes.md).
 - **Publishing:** the full cloud is converted and published on every scan.
 

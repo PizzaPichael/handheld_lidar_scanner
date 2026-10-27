@@ -3,17 +3,20 @@ import math
 from .geometry import rotate_vector
 
 
-def scan_to_points(scan, orientation):
-    """Wandelt einen LaserScan in 3D-Punkte, gedreht um die Orientierung (x, y, z, w).
+def scan_to_points(scan, orientation, position):
+    """Wandelt einen LaserScan in 3D-Punkte im Weltframe.
 
-    Messwerte außerhalb von range_min/range_max werden verworfen.
+    Jeder Punkt wird um die Orientierung (x, y, z, w) des Scanners gedreht und dann um
+    dessen Position (x, y, z) verschoben. Messwerte außerhalb von range_min/range_max
+    werden verworfen.
     """
+    px, py, pz = position
     angle = scan.angle_min
     points = []
     for r in scan.ranges:
         if scan.range_min < r < scan.range_max:
-            point = (r * math.cos(angle), r * math.sin(angle), 0.0)
-            points.append(rotate_vector(point, orientation))
+            x, y, z = rotate_vector((r * math.cos(angle), r * math.sin(angle), 0.0), orientation)
+            points.append((x + px, y + py, z + pz))
         angle += scan.angle_increment
     return points
 

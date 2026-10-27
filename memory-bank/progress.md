@@ -14,8 +14,9 @@ Verified off-device only (no ROS on the dev machine). Nothing below has been run
 Observed, cause known or suspected, not fixed.
 
 ### Point cloud / fusion
-- **Points only rotated, not translated.** `scan_to_points` ignores position, so walking around stacks all scans at the origin.
-- **SLAM pose probably never arrives.** Node subscribes to `/slam_toolbox/pose` as `PoseStamped`; slam_toolbox likely publishes `/pose` as `PoseWithCovarianceStamped`. Unverified. If true, `slam_position` stays `(0, 0, 0)`.
+- **SLAM pose never arrives.** Node subscribes to `/slam_toolbox/pose` as `PoseStamped`. slam_toolbox (`jazzy` branch, `slam_toolbox_common.cpp`, `setROSInterfaces()`) publishes `pose` (resolves to `/pose`) as `PoseWithCovarianceStamped`, `frame_id = map`, only after a successfully processed scan. So `slam_position` stays `(0, 0, 0)` and the point translation has no effect yet.
+- **Frame mismatch.** The slam pose is in `map`, the cloud is published in `odom`. Exact only while `map → odom` is identity.
+- **2D SLAM on a tilting scanner.** slam_toolbox assumes a horizontal scan plane. Its position estimate while the scanner is tilted is untested and probably unreliable.
 - **Circular TF.** slam_toolbox needs `odom → base_link`; the fusion node builds it from slam_toolbox's pose.
 - **Yaw drift.** Gyro-only yaw, no magnetometer. Idea from the abandoned `raspi_remote` branch: ICM-20948 (has a magnetometer).
 
@@ -27,6 +28,7 @@ Observed, cause known or suspected, not fixed.
 
 | Problem | Fix | Commit |
 |---|---|---|
+| Scan points only rotated, not translated by the device position | `scan_to_points(scan, orientation, position)` rotates, then adds the position; node passes `slam_position`. No runtime effect until the pose subscription is fixed (see above) | uncommitted |
 | Pi froze: point cloud grew without limit and was fully republished every scan | Voxel grid, `voxel_size` param ([ADR 0002](../docs/adr/0002-voxel-grid-instead-of-keyframes.md)) | `c913b7f` |
 | Fusion node was one 288-line file | Split into modules ([ADR 0003](../docs/adr/0003-split-fusion-node-into-ros-free-modules.md)); unused `/imu_marker` publisher and dead attributes removed | `6e21694` |
 | slam_toolbox YAML without `ros__parameters`, `use_sim_time` at top level | Wrapped correctly | `0429c83` |
@@ -39,8 +41,7 @@ Observed, cause known or suspected, not fixed.
 ## Open items
 
 - [ ] Run the full launch on the Pi after all fixes (blocked by internet).
-- [ ] Translate points by the device position, not only rotate.
-- [ ] Verify/fix the slam_toolbox pose topic and message type.
+- [ ] Fix the pose subscription: `/pose`, `PoseWithCovarianceStamped`.
 - [ ] Resolve the circular `odom → base_link` dependency.
 - [ ] Decide publishing strategy if the cloud is still slow (timer vs. delta + RViz decay).
 - [ ] Finish or remove `restrict_scan_by_angle` (WIP, only computes angles, unused).

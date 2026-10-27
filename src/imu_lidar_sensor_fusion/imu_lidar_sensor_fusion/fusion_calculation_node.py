@@ -72,7 +72,7 @@ class FusionNode(Node):
             make_transform(stamp, WORLD_FRAME, BASE_FRAME, self.slam_position, self.orientation))
 
     def lidar_callback(self, msg: LaserScan):
-        self.point_cloud.add(scan_to_points(msg, self.orientation))
+        self.point_cloud.add(scan_to_points(msg, self.orientation, self.slam_position))
         self.pointcloud_pub.publish(make_pointcloud_msg(self._now(), WORLD_FRAME, self.point_cloud.points))
 
     def slam_pose_callback(self, msg: PoseStamped):
