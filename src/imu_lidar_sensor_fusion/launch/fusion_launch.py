@@ -11,55 +11,57 @@ from launch.conditions import IfCondition
 from launch.actions import DeclareLaunchArgument
 from launch.substitutions import LaunchConfiguration
 
-
+# The launch_descriptions describes a list of actions the `ros2 launch` command shall execute
 def generate_launch_description():
-    # --- Lidar Launch-Datei ---
+    # --- Create links to additional, external launch files ---
+        # --- Lidar Launch-Datei ---
     lidar_launch_file = os.path.join(
         get_package_share_directory('rplidar_ros'),
         'launch',
         'rplidar_c1_launch.py'
     )
 
-    # --- IMU Launch-Datei ---
+        # --- IMU Launch-Datei ---
     imu_launch_file = os.path.join(
         get_package_share_directory('mpu6050driver'),
         'launch',
         'mpu6050driver_launch.py'
     )
 
-    # Launch-Argument für RViz
-    declare_rviz_arg = DeclareLaunchArgument(
-        'use_rviz',
-        default_value='false',
-        description='Starte RViz wenn true'
-    )
-
-    # --- RViz Config (optional anpassen) ---
+        # --- RViz Config (optional anpassen) ---
     rviz_config = os.path.join(
         get_package_share_directory('imu_lidar_sensor_fusion'),
         'rviz2',
         'fusion_config.rviz'
     )
 
-    # --- slam_toolbox Config ---
+        # --- slam_toolbox Config ---
     slam_config = os.path.join(
         get_package_share_directory('imu_lidar_sensor_fusion'),
         'config',
         'mapper_params_online.yaml'
     )
 
+    # --- Declare additional startup arguments ---
+        # --- Launch-Argument für RViz---
+    declare_rviz_arg = DeclareLaunchArgument(
+        'use_rviz',
+        default_value='false',  # Is only used, if no value was provided in the `ros2 launch` cli command
+        description='Starte RViz wenn true'
+    )
+
     return LaunchDescription([
-        # Lidar Node (via Launch-Datei eingebunden)
+        # Start a lidar Node (via Launch-Datei eingebunden)
         IncludeLaunchDescription(
             PythonLaunchDescriptionSource(lidar_launch_file)
         ),
 
-        # IMU Node (via Launch-Datei eingebunden)
+        # Start an IMU Node (via Launch-Datei eingebunden)
         IncludeLaunchDescription(
             PythonLaunchDescriptionSource(imu_launch_file)
         ),
 
-        # Fusion Node (mein Python-Skript)
+        # Start my custom fusion Node (my Python-Skript)
         Node(
             package='imu_lidar_sensor_fusion',
             executable='fusion_calculation_node',
@@ -68,7 +70,7 @@ def generate_launch_description():
             parameters=[{'voxel_size': 0.05}]   # Kantenlänge eines Voxels in m
         ),
 
-        # SLAM Toolbox Node
+        # Start the SLAM Toolbox Node
         Node(
             package='slam_toolbox',
             executable='sync_slam_toolbox_node',  # oder 'async_slam_toolbox_node'
@@ -77,9 +79,10 @@ def generate_launch_description():
             parameters=[slam_config]
         ),
 
+        # Make the variable available in the launch context
         declare_rviz_arg,
 
-        # RViz
+        # Start RViz
         Node(
             package='rviz2',
             executable='rviz2',
