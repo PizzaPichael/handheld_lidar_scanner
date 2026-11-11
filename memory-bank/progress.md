@@ -50,3 +50,4 @@ Observed, cause known or suspected, not fixed.
 - [ ] Add `geometry_msgs`, `tf2_ros`, `sensor_msgs_py` to `package.xml`.
 - [ ] Fix `#1/bin/bash` in `watch_ws_lidar.sh` and `Type_simple` in `x11vnc.service`.
 - [ ] Add an automated test setup for the ROS-free modules (currently only ad-hoc scripts).
+- [ ] Add LSM9DS1 as second IMU, MPU6050 for LiDAR pitch only (planned, see open decisions in `activeContext.md`).

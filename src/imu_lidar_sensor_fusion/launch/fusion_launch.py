@@ -22,7 +22,7 @@ def generate_launch_description():
     )
 
         # --- IMU Launch-Datei ---
-    imu_launch_file = os.path.join(
+    six_dof_imu_launch_file = os.path.join(
         get_package_share_directory('mpu6050driver'),
         'launch',
         'mpu6050driver_launch.py'
@@ -58,7 +58,7 @@ def generate_launch_description():
 
         # Start an IMU Node (via Launch-Datei eingebunden)
         IncludeLaunchDescription(
-            PythonLaunchDescriptionSource(imu_launch_file)
+            PythonLaunchDescriptionSource(six_dof_imu_launch_file)
         ),
 
         # Start my custom fusion Node (my Python-Skript)

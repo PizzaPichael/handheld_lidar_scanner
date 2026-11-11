@@ -10,6 +10,7 @@ log/
 .idea/
 .vscode/
 *.swp
+handheld_lidar_scanner.code-workspace
 
 # Systemdateien
 .DS_Store
