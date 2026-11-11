@@ -8,6 +8,10 @@ Getting the whole pipeline running on the Pi again after a long break, with a po
 
 Preparing a second IMU. Plan by the user, nothing implemented yet: an LSM9DS1 (9DOF) tracks the device, the MPU6050 (6DOF) only measures the LiDAR pitch, because a motor will pitch the LiDAR up and down independently of the device.
 
+## Recent changes (2026-11-11)
+
+- `servo_test/servo_test.py` added: standalone SG90 test (gpiozero + lgpio, GPIO18, arrow keys via curses). Not run on the Pi yet.
+
 ## Recent changes (2026-11-04)
 
 - MPU6050-related identifiers in `fusion_calculation_node.py` and `fusion_launch.py` renamed to `six_dof_imu_*` (parse and attribute check off-device, not run on the Pi). Topics, frames and generic helpers such as `ComplementaryFilter` keep their names.
